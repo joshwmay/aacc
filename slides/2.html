@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AACC Interview Presentation</title>
+    <meta name="Joshua May" content="Presentation slides for research analyst interview">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+
+</head>
+
+<body>
+    <div class="column">
+        <h1>Maryland Community Colleges:</h1>
+        <h3>Tuition Price 2017 - 2021</h3>
+        <div id="chart2"></div>
+    </div>
+</body>
+<script>
+    var data2 = [{
+            label: 'Chesapeake College',
+            y: -8.9
+        }, {
+            label: 'College of Southern Maryland',
+            y: -4.8
+        }, {
+            label: 'Baltimore City Community College',
+            y: +2.4
+        }, {
+            label: "Prince George's Community College",
+            y: +4.3
+        }, {
+            label: 'Cecil College',
+            y: +4.7
+        }, {
+            label: 'Hagerstown Community College',
+            y: +5.1
+        }, {
+            label: 'Garrett College',
+            y: +5.2
+        }, {
+            label: 'Wor-Wic Community College',
+            y: +7.8
+        }, {
+            label: 'Frederick Community College',
+            y: +8.9
+        }, {
+            label: 'Montgomery College',
+            y: +8.9
+        }, {
+            label: 'Anne Arundel Community College',
+            y: +10.8,
+            indexLabel: "AACC",
+        }, {
+            label: 'Howard Community College',
+            y: +12.5
+        }, {
+            label: 'Harford Community College',
+            y: +14.2
+        }, {
+            label: 'Allegany College of Maryland',
+            y: +23
+        }, {
+            label: 'Community College of Baltimore County',
+            y: +28.4
+        }, {
+            label: 'Carroll Community College',
+            y: +37.1
+        },
+
+    ]
+    var cont = document.getElementById("chart2")
+    var chart2 = new CanvasJS.Chart(cont, {
+        backgroundColor: null,
+        animationEnabled: true,
+        axisX: {
+            labelFontColor: "",
+            interval: 1,
+            gridThickness: 0,
+            tickLength: 0,
+        },
+        axisY: {
+            maximum: 40,
+            minimum: -20,
+            interval: 20,
+            gridThickness: 0,
+            tickLength: 1,
+            prefix: "",
+            suffix: "%",
+            includeZero: true
+        },
+        legend: {
+            verticalAlign: "top",
+            horizontalAlign: "right",
+            dockInsidePlotArea: true,
+            fontColor: "black"
+        },
+        toolTip: {
+            enabled: true, //disable here
+            animationEnabled: true, //disable here
+            shared: true
+        },
+        data: [{
+            name: "% Change 2017-2021",
+            showInLegend: true,
+            toolTipContent: 'School: {label}<br>Avg Change: {y}%',
+            legendMarkerType: "square",
+            type: "line",
+            color: "blue",
+            markerSize: 4,
+            dataPoints: data2
+        }]
+    });
+    chart2.render();
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+Institution,INST,Students >25,% Undergraduate Enrollment,Full-Time,Part-Time
+Allegany College of Maryland,CC,621,24,195,426
+Anne Arundel Community College,CC,4327,34.2,653,3674
+Baltimore City Community College,CC,2557,52.1,495,2062
+Carroll Community College,CC,694,22.3,104,590
+Cecil College,CC,654,27.5,119,535
+Chesapeake College,CC,555,25.4,61,494
+College of Southern Maryland,CC,1696,26.7,300,1396
+Community College of Baltimore County,CC,7127,40.2,1069,6058
+Frederick Community College,CC,1602,26.1,237,1365
+Garret College,CC,72,11.1,34,38
+Hagerstown Community College,CC,1116,29,134,982
+Harford Community College,CC,1545,27.1,219,1326
+Howard Community College,CC,3071,33.7,462,2609
+Montgomery College,CC,6444,30.3,963,5481
+Prince George's Community College,CC,4301,36.5,587,3714
+Wor-Wic Community College,CC,1025,35.5,159,866
+Bowie State University,4Y,904,17.3,526,378
+Coppin State University,4Y,866,36.3,450,416
+Frostburg State University,4Y,592,13.4,175,417
+Salisbury University,4Y,553,7.2,375,178
+Towson University,4Y,2269,11.6,1271,998
+University of Baltimore,4Y,1140,54.4,441,699
+"University of Maryland, Baltimore",4Y,451,51.4,301,150
+"University of Maryland, Baltimore County",4Y,1702,15.4,911,791
+"University of Maryland, College Park",4Y,1798,5.9,1094,704
+University of Maryland Eastern Shore,4Y,277,11.9,158,119
+University of Maryland Global Campus,4Y,34292,74.3,6907,27385
+Morgan State University,4Y,947,14.7,585,362
+St. Mary's College of Maryland,4Y,58,3.9,34,24
+Capitol Technology University,IND,80,20,46,34
+Goucher College,IND,133,9.2,24,109
+Hood College,IND,115,10.2,78,37
+Johns Hopkins University,IND,323,5.2,41,282
+Loyola University of Maryland,IND,34,0.9,13,21
+Maryland Institute College of Art,IND,119,6.8,61,58
+McDaniel College,IND,64,3.7,23,41
+Mount St. Mary's University,IND,160,8.4,70,90
+Notre Dame of Maryland University,IND,284,36.3,68,216
+St. John's College,IND,26,5.3,25,NaN
+Stevenson University,IND,383,12.3,89,294
+Washington Adventist University,IND,323,34.2,249,74
+Washington College,IND,17,1.3,12,NaN
+Bais HaMedrash and Mesivta of Baltimore,PRIV,NaN,NaN,NaN,NaN
+Faith Theological Seminary,PRIV,41,100,10,31
+Lincoln College of Technology,PRIV,243,45.8,167,76
+Maryland University of Integrative Health,PRIV,NaN,NaN,NaN,NaN
+Ner Israel Rabbinical College,PRIV,142,48.3,27,115
+Reid Temple Bible College,PRIV,18,94.7,NaN,NaN
+SANS Technology Institute,PRIV,NaN,NaN,NaN,NaN
+St. Mary's Seminary and University,PRIV,NaN,NaN,NaN,NaN
+Women's Institute of Torah Seminary,PRIV,NaN,NaN,NaN,NaN
+Yeshiva College of the Nation's Capital,PRIV,NaN,NaN,NaN,NaN

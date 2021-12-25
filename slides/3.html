@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AACC Interview Presentation</title>
+    <meta name="Joshua May" content="Presentation slides for research analyst interview">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+</head>
+
+<body>
+    <div class="section" id="map">
+        <h1>Maryland Community College Rankings</h1>
+        <div id="mapid"></div>
+    </div>
+</body>
+<script>
+    var mymap = L.map('mapid').setView([39.10009657780947, -77.157878462514], 7);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+    }).addTo(mymap);
+    var circle = L.circle([39.05002999594673, -76.51384918500835], 6000, {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 50
+    }).addTo(mymap).bindPopup("<b><a href='https://www.aacc.edu/'>Anne Arundel Community College</a></b><br><b>Avg$ Credit Hour:</b>  $411.80<br><br><b>Students 25 and Older:</b>  #5<br>");
+    var circle = L.circle([39.3206170291295, -76.6613018002544], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.bccc.edu/'>Baltimore City Community College</a></b><br><b>Avg$ Credit Hour:</b>  $308.20<br><b>Students 25 and Older:</b>  #1<br>");
+    var circle = L.circle([39.53183213962793, -76.99109095421696], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.allegany.edu/'>Allegany College of Maryland</a></b><br><br>");
+    var circle = L.circle([39.64116925792962, -75.95647399326049], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://cecil.edu/'>Cecil College</a></b><br><b>Avg$ Credit Hour:</b>  $309.60<br><b>Students 25 and Older:</b>  #9<br>");
+    var circle = L.circle([38.95275598286228, -76.08110479258522], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.chesapeake.edu/'>Chesapeake College</a></b><br><b>Avg$ Credit Hour:</b>  $320.60<br><b>Students 25 and Older:</b>  #13<br>");
+    var circle = L.circle([38.55961742722099, -77.00892890675182], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.csmd.edu/'>College of Southern Maryland</a></b><br><b>Avg$ Credit Hour:</b>  $375.60<br><b>Students 25 and Older:</b>  #11<br>");
+    var circle = L.circle([39.35364008477602, -76.4823566374394], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.ccbcmd.edu/'>Community College of Baltimore County</a></b><br><b>Avg$ Credit Hour:</b>  $372.80<br><b>Students 25 and Older:</b>  #2<br>");
+    var circle = L.circle([39.451979960641104, -77.4184624490804], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.frederick.edu/'>Frederick Community College</a></b><br><b>Avg$ Credit Hour:</b>  $389.60<br><b>Students 25 and Older:</b>  #12<br>");
+    var circle = L.circle([39.56088682063832, -79.34275053559213], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.garrettcollege.edu/'>Garret College</a></b><br><b>Avg$ Credit Hour:</b>  $332.80<br><b>Students 25 and Older:</b>  #16<br>");
+    var circle = L.circle([39.63194874917637, -77.66902870304568], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.hagerstowncc.edu/'>Hagerstown Community College</a></b><br><b>Avg$ Credit Hour:</b>  $264.60<br><b>Students 25 and Older:</b>  #8<br>");
+    var circle = L.circle([39.56034703621479, -76.28449202024339], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.harford.edu/'>Harford Community College</a></b><br><b>Avg$ Credit Hour:</b>  $152.60<br><b>Students 25 and Older:</b>  #10<br>");
+    var circle = L.circle([39.21243733541452, -76.87831298955557], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.howardcc.edu/'>Howard Community College</a></b><br><b>Avg$ Credit Hour:</b>  $301.20<br><b>Students 25 and Older:</b>  #6<br>");
+    var circle = L.circle([39.10009657780947, -77.157878462514], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.montgomerycollege.edu/'>Montgomery College</a></b><br><b>Avg$ Credit Hour:</b>  $451.20<br><b>Students 25 and Older:</b>  #7<br>");
+    var circle = L.circle([38.88684458754917, -76.82660986257397], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='https://www.pgcc.edu/'>Prince George's Community College</a></b><br><b>Avg$ Credit Hour:</b>  $350.00<br><b>Students 25 and Older:</b>  #3<br>");
+    var circle = L.circle([38.374571849605964, -75.49990880489847], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.worwic.edu/'>Wor-Wic Community College</a></b><br><b>Avg$ Credit Hour:</b>  $319.60<br><b>Students 25 and Older:</b>  #4<br>");
+    var circle = L.circle([39.53177007829051, -76.99130553102033], 6000, {
+        color: 'blue',
+        fillColor: 'lightblue',
+        fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<b><a href='http://www.carrollcc.edu/'>Carroll Community College</a></b><br><b>Avg$ Credit Hour:</b>  $313.00<br><b>Students 25 and Older:</b>  #15<br>");
+</script>
+
+</html>

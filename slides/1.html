@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AACC Interview Presentation</title>
+    <meta name="Joshua May" content="Presentation slides for research analyst interview">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+
+</head>
+
+<body>
+    <div class="column">
+        <h1>Maryland Community Colleges: Tuition</h1>
+        <div id="chart1"></div>
+    </div>
+</body>
+<script>
+    var data1 = [{
+        label: 'Harford Community College',
+        y: 152.6
+    }, {
+        label: 'Hagerstown Community College',
+        y: 264.6
+    }, {
+        label: 'Howard Community College',
+        y: 301.2
+    }, {
+        label: 'Baltimore City Community College',
+        y: 308.2
+    }, {
+        label: 'Cecil College',
+        y: 309.6
+    }, {
+        label: 'Carroll Community College',
+        y: 313
+    }, {
+        label: 'Allegany College of Maryland',
+        y: 313.8
+    }, {
+        label: 'Wor-Wic Community College',
+        y: 319.6
+    }, {
+        label: 'Chesapeake College',
+        y: 320.6
+    }, {
+        label: 'Garrett College',
+        y: 332.8
+    }, {
+        label: "Prince George's Community College",
+        y: 350.0
+    }, {
+        label: 'Community College of Baltimore County',
+        y: 372.8
+    }, {
+        label: 'College of Southern Maryland',
+        y: 375.6
+    }, {
+        label: 'Frederick Community College',
+        y: 389.6
+    }, {
+        label: 'Anne Arundel Community College',
+        y: 411.8,
+        indexLabel: "AACC",
+    }, {
+        label: 'Montgomery College',
+        y: 451.2
+    }];
+    var cont = document.getElementById("chart1")
+    var chart1 = new CanvasJS.Chart(cont, {
+        backgroundColor: null,
+        animationEnabled: true,
+        axisX: {
+            labelFontColor: "",
+            interval: 1,
+            gridThickness: 0,
+            tickLength: 0,
+        },
+        axisY: {
+            maximum: 500,
+            minimum: 0,
+            interval: 100,
+            gridThickness: 0,
+            tickLength: 1,
+            prefix: "$",
+        },
+        legend: {
+            verticalAlign: "top",
+            horizontalAlign: "right",
+            dockInsidePlotArea: true,
+            fontColor: "black"
+        },
+        toolTip: {
+            enabled: true, //disable here
+            animationEnabled: true, //disable here
+            shared: true
+        },
+        data: [{
+            name: "Avg Tuition 2017-2021",
+            showInLegend: true,
+            toolTipContent: 'School: {label} <br>Avg Cost: ${y} credit hour',
+            legendMarkerType: "square",
+            type: "column",
+            color: "rgba(40,175,101,0.6)",
+            markerSize: 12,
+            dataPoints: data1
+        }]
+    });
+    chart1.render();
+</script>
+
+</html>

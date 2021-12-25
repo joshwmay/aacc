@@ -1,0 +1,92 @@
+.wrap {
+    margin: auto;
+    width: 1180px;
+    overflow: hidden;
+    /* because children will be floated */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.canvasjs-chart-canvas {
+    width: 500px !important;
+}
+
+iframe {
+    width: 600px;
+    height: 350px;
+    display: flex;
+    align-self: center;
+}
+
+#mapid,
+#chart1,
+#chart2 {
+    width: 525px;
+    height: 275px;
+    display: flex;
+    align-self: center;
+}
+
+#slides {
+    width: 9999px;
+}
+
+#slides>div {
+    height: 600px;
+    width: 1180px;
+    float: left;
+    text-align: center;
+}
+
+#slides>div {
+    height: 600px;
+    width: 1180px;
+    float: left;
+    margin-right: 200px;
+    text-align: center;
+    /* Flexible Box Model */
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    display: box;
+    box-align: center;
+    box-orient: horizontal;
+    box-pack: center;
+}
+
+body {
+    background-image: -webkit-gradient( radial, 50% 50%, 0, 50% 50%, 1000, from(rgba(245, 245, 245, 1)), to(rgba(100, 100, 100, 1)));
+}
+
+footer {
+    margin: 5px
+}
+
+#slides h1,
+#slides h3,
+#slides h4,
+#slides h5 {
+    color: #292929;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: -2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 0 white;
+}
+
+#slides h2 {
+    color: #292929;
+    font-family: 'League Gothic', sans-serif;
+    text-shadow: .25px .25px 0 white;
+}
+
+#slides>div h2 {
+    font-size: 180px;
+    line-height: 1em;
+    margin: 0;
+}
