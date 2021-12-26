@@ -1,3 +1,12 @@
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
 .wrap {
     margin: auto;
     width: 1180px;
@@ -12,7 +21,7 @@
 }
 
 .canvasjs-chart-canvas {
-    width: 500px !important;
+    width: 400px !important;
 }
 
 iframe {
@@ -32,13 +41,54 @@ iframe {
 }
 
 #slides {
+    display: flex;
+    margin-left: 150px;
     width: 9999px;
+}
+
+@media (max-width: 992px) {}
+
+@media only screen and (max-width: 600px) {
+    #slides {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9999px;
+    }
+    #mapid,
+    #chart1,
+    #chart2 {
+        width: auto;
+        height: 275px;
+        display: flex;
+        align-self: center;
+        margin: 2.5px;
+    }
+    #slides h1,
+    #slides h3,
+    #slides h4,
+    #slides h5 {
+        color: #292929;
+        font-family: 'League Gothic', sans-serif;
+        letter-spacing: -2px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 0 white;
+        overflow: scroll;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 #slides>div {
     height: 600px;
     width: 1180px;
-    float: left;
+    float: center;
     text-align: center;
 }
 

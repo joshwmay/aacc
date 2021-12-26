@@ -18,16 +18,17 @@
 <body>
 
     <div class="wrap">
-        <input type="text" id="code">
-        <input type="submit" onclick="trycode(document.getElementById('code').value.toString())"></button>
-        <div id="slides">
-            <!-- load in slides -->
-        </div>
+        <input type="password" id="code">
+        <input type="submit" id="enter" onclick="startPage()"></button>
     </div>
 
+    <div id="slides">
+        <!-- load in slides -->
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <button onclick="prv()">Previous Slide</button>
     <button onclick="nxt()">Next Slide</button>
+
 </body>
 <footer>Data compiled from
     <a href="https://mhec.maryland.gov/publications/Documents/Research/AnnualPublications/2021DataBook.pdf">
@@ -35,6 +36,100 @@
     </a>.
 </footer>
 <script>
+    function startPage() {
+        var passwordInput = document.getElementById('code');
+        var passStatus = document.getElementById('pass-status');
+        var click = document.getElementById('enter');
+
+        if (passwordInput.type == 'password' & passwordInput.value === "pleasehire") {
+            passwordInput.type = 'text';
+            var Slides = {
+                container: $('#slides'),
+
+                totalSlides: '',
+
+                translateAmount: 0,
+
+                currentSlide: 0,
+
+                slideWidth: '100px',
+
+                slideHeight: '500px',
+
+                init: function(totalSlides) {
+                    var each;
+
+                    if (!totalSlides) throw new Error('Please pass the total number of slides.');
+                    Slides.totalSlides = totalSlides;
+
+                    Slides.loadContent();
+
+                    each = Slides.container.children('div');
+
+                    // Determine the width of our canvas
+                    Slides.slideWidth = each.width() + (parseInt(each.css('margin-right'), 10));
+
+                    Slides.keyPress();
+                },
+
+                loadContent: function() {
+                    Slides.container.hide();
+                    for (var i = 0; i < Slides.totalSlides; i++) {
+                        $('<div id="#slide-' + i + '"></div>')
+                            .load('slides/' + i + '.html')
+                            .appendTo(Slides.container);
+                    }
+                    Slides.container.show();
+                },
+
+                keyPress: function() {
+                    $(document.body).keydown(function(e) {
+                        // if left or right arrow key is pressed
+                        if (e.keyCode === 39 || e.keyCode === 37) {
+                            e.preventDefault();
+                            (e.keyCode === 39) ? Slides.next(): Slides.prev();
+                        }
+                    });
+                },
+
+                next: function() {
+                    Slides.translateAmount -= Slides.slideWidth;
+                    Slides.updateHash(++Slides.currentSlide);
+                    Slides.animate();
+                },
+
+                prev: function() {
+                    // No more left to go back.
+                    if (Slides.translateAmount === 0) return;
+
+                    Slides.translateAmount += Slides.slideWidth;
+                    Slides.updateHash(--Slides.currentSlide);
+                    Slides.animate();
+                },
+
+                animate: function() {
+                    Slides
+                        .container
+                        .children()
+                        .css('-webkit-transform', 'translateX(' + Slides.translateAmount + 'px)');
+                },
+
+                updateHash: function(direction) {
+                    // Update current Slides and hash.
+                    location.hash = '#slide-' + Slides.currentSlide;
+                }
+            };
+
+
+
+            Slides.init(6);
+
+        } else {
+            passwordInput.type = 'password';
+        }
+
+    }
+
     function nxt() {
         Slides.translateAmount -= Slides.slideWidth;
         Slides.updateHash(++Slides.currentSlide);
@@ -50,90 +145,6 @@
         Slides.animate();
     };
     let lock = 0;
-    var input = document.getElementById("code");
-    var filter = input.value.toString();
-
-    var Slides = {
-        container: $('#slides'),
-
-        totalSlides: '',
-
-        translateAmount: 0,
-
-        currentSlide: 0,
-
-        slideWidth: '100px',
-
-        slideHeight: '1000px',
-
-        init: function(totalSlides) {
-            var each;
-
-            if (!totalSlides) throw new Error('Please pass the total number of slides.');
-            Slides.totalSlides = totalSlides;
-
-            Slides.loadContent();
-
-            each = Slides.container.children('div');
-
-            // Determine the width of our canvas
-            Slides.slideWidth = each.width() + (parseInt(each.css('margin-right'), 10));
-
-            Slides.keyPress();
-        },
-
-        loadContent: function() {
-            Slides.container.hide();
-            for (var i = 0; i < Slides.totalSlides; i++) {
-                $('<div id="#slide-' + i + '"></div>')
-                    .load('slides/' + i + '.html')
-                    .appendTo(Slides.container);
-            }
-            Slides.container.show();
-        },
-
-        keyPress: function() {
-            $(document.body).keydown(function(e) {
-                // if left or right arrow key is pressed
-                if (e.keyCode === 39 || e.keyCode === 37) {
-                    e.preventDefault();
-                    (e.keyCode === 39) ? Slides.next(): Slides.prev();
-                }
-            });
-        },
-
-        next: function() {
-            Slides.translateAmount -= Slides.slideWidth;
-            Slides.updateHash(++Slides.currentSlide);
-            Slides.animate();
-        },
-
-        prev: function() {
-            // No more left to go back.
-            if (Slides.translateAmount === 0) return;
-
-            Slides.translateAmount += Slides.slideWidth;
-            Slides.updateHash(--Slides.currentSlide);
-            Slides.animate();
-        },
-
-        animate: function() {
-            Slides
-                .container
-                .children()
-                .css('-webkit-transform', 'translateX(' + Slides.translateAmount + 'px)');
-        },
-
-        updateHash: function(direction) {
-            // Update current Slides and hash.
-            location.hash = '#slide-' + Slides.currentSlide;
-        }
-    };
-
-
-
-    // All right; let's do this. 
-    Slides.init(6);
 </script>
 
 </html>
