@@ -7,136 +7,120 @@
     width: device-width;
 }
 
-.wrap {
-    margin: auto;
-    width: 1180px;
-    overflow: hidden;
-    /* because children will be floated */
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-}
-
-.canvasjs-chart-canvas {
-    width: 400px !important;
-}
-
-iframe {
-    width: 600px;
-    height: 350px;
-    display: flex;
-    align-self: center;
-}
-
-#mapid,
-#chart1,
-#chart2 {
-    width: 525px;
-    height: 275px;
-    display: flex;
-    align-self: center;
-}
-
-#slides {
-    display: flex;
-    margin-left: 150px;
-    width: 9999px;
-}
-
-@media (max-width: 992px) {}
-
-@media only screen and (max-width: 600px) {
-    #slides {
-        height: 100%;
-        padding: 0;
-        margin: 0;
+@media  (max-width: 600px) {
+    h1 {
+        font-size: -2px;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+       }
+     h3 {
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 20px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+    #topleft,
+    #topright,
+    #bottomleft,
+    #bottomright {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 9999px;
+    }
+    .rows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        flex-wrap: wrap;  
+        height: 500px;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        width: 500px;
+    }
+    .canvasjs-chart-canvas {
+        width: 400px !important;
+    }
+    iframe {
+        width: 600px;
+        height: 350px;
+        display: flex;
+        align-self: center;
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
     }
     #mapid,
     #chart1,
     #chart2 {
-        width: auto;
-        height: 275px;
+        width: 80%;
+        height: 100%;
+        display: block;
+        align-self: center;
+    }
+}
+
+@media  (min-width: 601px) {
+    h1 {
+        font-size: -2px;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+       }
+     h3 {
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 20px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+    #topleft,
+    #topright,
+    #bottomleft,
+    #bottomright {
+        display: flex;
+    }
+    .rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        height: 500px;
+    }
+    .column {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        width: 500px;
+    }
+    .canvasjs-chart-canvas {
+        width: 400px !important;
+    }
+    iframe {
+        width: 600px;
+        height: 350px;
         display: flex;
         align-self: center;
-        margin: 2.5px;
     }
-    #slides h1,
-    #slides h3,
-    #slides h4,
-    #slides h5 {
-        color: #292929;
-        font-family: 'League Gothic', sans-serif;
-        letter-spacing: -2px;
-        margin-top: 0;
-        margin-bottom: 0;
-        text-shadow: 1px 1px 0 white;
-        overflow: scroll;
-        font-size: medium;
+    .column {
         display: flex;
-        align-items: center;
-        text-align: center;
+        flex-direction: column;
+        justify-self: center;
     }
-}
-
-#slides>div {
-    height: 600px;
-    width: 1180px;
-    float: center;
-    text-align: center;
-}
-
-#slides>div {
-    height: 600px;
-    width: 1180px;
-    float: left;
-    margin-right: 200px;
-    text-align: center;
-    /* Flexible Box Model */
-    display: -webkit-box;
-    -webkit-box-align: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-pack: center;
-    display: box;
-    box-align: center;
-    box-orient: horizontal;
-    box-pack: center;
+    #mapid,
+    #chart1,
+    #chart2 {
+        width: 90%;
+        height: 100%;
+        display: block;
+        align-self: center;
+    }
 }
 
 body {
-    background-image: -webkit-gradient( radial, 50% 50%, 0, 50% 50%, 1000, from(rgba(245, 245, 245, 1)), to(rgba(100, 100, 100, 1)));
+    background-image: -webkit-gradient( radial, 55% 50%, 0, 50% 50%, 1000, from(rgb(207, 241, 206)), to(rgb(98, 195, 233)));
 }
 
 footer {
     margin: 5px
 }
 
-#slides h1,
-#slides h3,
-#slides h4,
-#slides h5 {
-    color: #292929;
-    font-family: 'League Gothic', sans-serif;
-    letter-spacing: -2px;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-shadow: 1px 1px 0 white;
-}
-
-#slides h2 {
-    color: #292929;
-    font-family: 'League Gothic', sans-serif;
-    text-shadow: .25px .25px 0 white;
-}
-
-#slides>div h2 {
-    font-size: 180px;
-    line-height: 1em;
-    margin: 0;
-}
