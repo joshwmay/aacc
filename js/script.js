@@ -281,6 +281,7 @@ function mapper() {
   }).addTo(mymap).bindPopup("<b><a href='http://www.carrollcc.edu/'>Carroll Community College</a></b><br><b>Student Body:</b> 3,115<br><b>$ Per Credit Hour:</b>  $313.00<br><b>Students 25 and Older:</b>  #15<br>");
   return mymap  
 }
+
 // function startPage() {    
 //     var passwordInput = document.getElementById('code');
 //     var passStatus = document.getElementById('pass-status');
