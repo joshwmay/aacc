@@ -7,14 +7,23 @@
     width: device-width;
 }
 
-#topleft h1 {
-    font-size: xx-large;
-    text-shadow: 2px 2px #000282b4;
+a {
+    color: white;
+    font-style: italic;
+}
+
+h1,
+.breaker h2 {
+    font-size: 36px;
+    text-shadow: 2px 2px #00028270;
+    margin-bottom: 1%;
+    letter-spacing: 2.5px;
+    text-decoration: underline;
 }
 
 #topleft h3 {
-    font-size: x-large;
-    text-shadow: 2px 2px #000282b4;
+    font-size: 22px;
+    text-shadow: 2px 2px #00028270;
 }
 
 #map.section {
@@ -27,9 +36,8 @@
 .rows h1,
 .rows h2,
 .rows h3 {
-    text-shadow: 2px 2px #000282b4;
-    margin-top: .75%;
-    margin-bottom: .75%
+    text-shadow: 2px 2px #00028270;
+    margin: .75%;
 }
 
 .rows.column {
@@ -62,9 +70,30 @@
     font-size: 20px;
     letter-spacing: -1px;
     background-color: #007582bf;
-    text-shadow: 2px 2px #000282b4;
+    text-shadow: 2px 2px #00028270;
     color: white;
     border-radius: 15px;
+}
+
+footer {
+    display: flex;
+    height: 2%;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    text-align: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    font-family: "Palatino", sans-serif;
+    font-size: 20px;
+    letter-spacing: -1px;
+    background-color: #007582bf;
+    text-shadow: 2px 2px #00028270;
+    color: white;
+    border-radius: 6px;
+    font-size: 30px;
+    margin-top: .5%;
+    padding: 1.5%;
 }
 
 .breaker p {
@@ -175,8 +204,7 @@
         flex-direction: row;
         justify-content: center;
         height: 500px;
-        margin-top: 2.5%;
-        margin-bottom: 2.5%
+        margin-top: .75%;
     }
     .column {
         display: flex;
@@ -214,12 +242,16 @@
     }
 }
 
-body {
-    background-color: white;
+#chart1,
+#chart2,
+#chart3,
+#bigchart,
+#mapid,
+.bead {
+    margin: 1%;
+    box-shadow: 2px 2px #00028270;
 }
 
-footer {
-    padding: 25px;
-    height: 40px;
-    font-size: large;
+body {
+    background-color: white;
 }
