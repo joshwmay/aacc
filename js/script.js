@@ -153,32 +153,13 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 color: "blue",
                 markerSize: 4,
                 dataPoints: data2
-            }, {
-                name: "Given 2021 Data Book Averages",
-                showInLegend: true,
-                toolTipContent: 'Avg Listed Salary: ${y}',
-                legendMarkerType: "square",
-                type: "line",
-                color: "red",
-                markerSize: 4,
-                dataPoints: data1
-            },
-            {
-                name: "Calculated Averages Using 2021 Data Book numbers",
-                showInLegend: true,
-                toolTipContent: 'Calculated Average: ${y}',
-                legendMarkerType: "square",
-                type: "line",
-                color: "gold",
-                markerSize: 4,
-                dataPoints: data6
             },
             {
                 name: "Assoc Professor Salary",
                 showInLegend: true,
                 toolTipContent: 'Assoc Professor Salary: ${y}',
                 legendMarkerType: "square",
-                type: "line",
+                type: "area",
                 color: "green",
                 markerSize: 4,
                 dataPoints: data3
