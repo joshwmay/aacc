@@ -6,38 +6,45 @@
 @-ms-viewport {
     width: device-width;
 }
-#topleft h1{
+
+#topleft h1 {
     font-size: xx-large;
     text-shadow: 2px 2px #000282b4;
 }
 
-#topleft h3{
+#topleft h3 {
     font-size: x-large;
     text-shadow: 2px 2px #000282b4;
 }
+
 #map.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 110%;
 }
+
 .rows {
     text-shadow: 2px 2px #000282b4;
     margin-top: .75%;
     margin-bottom: .75%
 }
-.rows.column { 
+
+.rows.column {
     margin-left: 1.75%;
     margin-right: 1.75%
 }
+
 .divider {
     width: 2%;
 }
+
 #bigchart {
     display: flex;
     height: 500px;
     margin-bottom: 10px
 }
+
 .breaker {
     display: flex;
     height: 20%;
@@ -51,40 +58,40 @@
     height: auto;
     font-family: "Palatino", sans-serif;
     font-size: 20px;
-    letter-spacing: -1px; 
+    letter-spacing: -1px;
     background-color: #007582bf;
     text-shadow: 2px 2px #000282b4;
     color: white;
     border-radius: 15px;
 }
 
-.breaker p{
+.breaker p {
     margin-left: 10%;
     margin-right: 10%;
-    padding: 0;
-    font-size: xx-large;
-}
-.breaker h2{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10px;
     padding: 0;
     font-size: xx-large;
 }
 
-@media  (max-width: 600px) {
+.breaker h2 {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    font-size: xx-large;
+}
+
+@media (max-width: 600px) {
     h1 {
         color: white;
         font-size: -2px;
         letter-spacing: -2px;
         font-family: "Palatino", sans-serif;
-       }
-     h3 {
+    }
+    h3 {
         color: white;
         font-family: "Palatino", sans-serif;
         font-size: 20px;
         letter-spacing: -1px;
-      }
+    }
     #topleft,
     #topright,
     #bottomleft,
@@ -92,19 +99,19 @@
         display: flex;
         background-color: #007582bf;
         justify-content: center;
-        overflow: hidden;        
+        overflow: hidden;
         border-radius: 25px;
     }
     .rows {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly; 
+        justify-content: space-evenly;
         height: 500px;
     }
     .column {
         display: flex;
         flex-direction: column;
-        justify-content: center;    
+        justify-content: center;
         width: 800px;
     }
     .canvasjs-chart-canvas {
@@ -133,19 +140,20 @@
         align-self: center;
     }
 }
-@media  (min-width: 601px) {
+
+@media (min-width: 601px) {
     h1 {
         font-size: -2px;
         letter-spacing: -2px;
         font-family: "Palatino", sans-serif;
         color: white;
-       }
-     h3 {
+    }
+    h3 {
         color: white;
         font-family: "Palatino", sans-serif;
         font-size: 20px;
         letter-spacing: -1px;
-      }
+    }
     #topleft,
     #topright,
     #bottomleft,
@@ -157,13 +165,13 @@
         overflow: hidden;
         border-radius: 25px;
         width: 80%;
-        justify-content: center;  
+        justify-content: center;
         text-align: center;
     }
     .rows {
         display: flex;
         flex-direction: row;
-        justify-content: center;    
+        justify-content: center;
         height: 500px;
         margin-top: 2.5%;
         margin-bottom: 2.5%
@@ -171,7 +179,7 @@
     .column {
         display: flex;
         flex-direction: row;
-        justify-content: center;  
+        justify-content: center;
         text-align: center;
         width: 500px;
     }
@@ -209,7 +217,7 @@ body {
 }
 
 footer {
-    margin: 5px;
+    padding: 25px;
+    height: 40px;
+    font-size: large;
 }
-
-
