@@ -110,6 +110,7 @@ function chart1(data) {
         interval: 1,
         gridThickness: 0,
         tickLength: 0,
+        lineColor: "white",
     },
     axisY: {
         maximum: 500,
@@ -118,12 +119,14 @@ function chart1(data) {
         gridThickness: 0,
         tickLength: 1,
         prefix: "$",
+        lineColor: "white",
+        labelFontColor: "white",
     },
     legend: {
         verticalAlign: "top",
         horizontalAlign: "right",
         dockInsidePlotArea: true,
-        fontColor: "black"
+        fontColor: "white"
     },
     toolTip: {
         enabled: true, //disable here
@@ -136,7 +139,7 @@ function chart1(data) {
         toolTipContent: 'School: {label} <br>Avg Cost: ${y} credit hour',
         legendMarkerType: "square",
         type: "column",
-        color: "rgba(40,175,101,0.6)",
+        color: "#E3611B",
         markerSize: 12,
         dataPoints: data
     }]
@@ -154,6 +157,7 @@ function chart2(data) {
             interval: 1,
             gridThickness: 0,
             tickLength: 0,
+            lineColor: "white",
         },
         axisY: {
             maximum: 40,
@@ -163,13 +167,15 @@ function chart2(data) {
             tickLength: 1,
             prefix: "",
             suffix: "%",
-            includeZero: true
+            includeZero: true,
+            lineColor: "white",
+            labelFontColor: "white",
         },
         legend: {
             verticalAlign: "top",
             horizontalAlign: "right",
             dockInsidePlotArea: true,
-            fontColor: "black"
+            fontColor: "white"
         },
         toolTip: {
             enabled: true, //disable here
@@ -191,7 +197,7 @@ function chart2(data) {
 
 }
 function mapper() { 
-  var mymap = L.map('mapid').setView([39.10009657780947, -77.157878462514], 7);    
+  var mymap = L.map('mapid').setView([39.10009657780947, -77.157878462514], 8);    
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
       id: 'mapbox/streets-v11',

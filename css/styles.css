@@ -6,6 +6,12 @@
 @-ms-viewport {
     width: device-width;
 }
+#map.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 110%;
+}
 .rows {
     margin-top: .75%;
     margin-bottom: .75%
@@ -25,9 +31,12 @@
     height: auto;
     font-family: "Palatino", sans-serif;
     font-size: 20px;
-    letter-spacing: -1px;    
-    background-image: -webkit-gradient( radial, 55% 50%, 0, 50% 50%, 1000, from(rgba(162, 197, 153, 0.808)), to(rgb(58, 144, 179)));
+    letter-spacing: -1px; 
+    background-color: #007582bf;
+    color: white;
+    border-radius: 15px;
 }
+
 .breaker h2,
 .breaker p{
     margin-left: 10%;
@@ -39,11 +48,13 @@
 
 @media  (max-width: 600px) {
     h1 {
+        color: white;
         font-size: -2px;
         letter-spacing: -2px;
         font-family: "Palatino", sans-serif;
        }
      h3 {
+        color: white;
         font-family: "Palatino", sans-serif;
         font-size: 20px;
         letter-spacing: -1px;
@@ -53,6 +64,10 @@
     #bottomleft,
     #bottomright {
         display: flex;
+        background-color: #007582bf;
+        justify-content: center;
+        overflow: hidden;        
+        border-radius: 25px;
     }
     .rows {
         display: flex;
@@ -63,7 +78,7 @@
     .column {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;    
+        justify-content: center;    
         width: 800px;
     }
     .canvasjs-chart-canvas {
@@ -75,11 +90,6 @@
         display: flex;
         align-self: center;
     }
-    .column {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-    }
     #mapid,
     #chart1,
     #chart2 {
@@ -87,6 +97,7 @@
         height: 100%;
         display: block;
         align-self: center;
+        overflow: hidden
     }
     #mapid {
         width: 100%;
@@ -95,16 +106,15 @@
         align-self: center;
     }
 }
-#bottomright {
-    overflow: hidden
-}
 @media  (min-width: 601px) {
     h1 {
         font-size: -2px;
         letter-spacing: -2px;
         font-family: "Palatino", sans-serif;
+        color: white;
        }
      h3 {
+        color: white;
         font-family: "Palatino", sans-serif;
         font-size: 20px;
         letter-spacing: -1px;
@@ -115,7 +125,13 @@
     #bottomright {
         display: flex;
         padding: 5px;
-        margin: 5px
+        margin: 5px;
+        background-color: #007582bf;
+        overflow: hidden;
+        border-radius: 25px;
+        width: 80%;
+        justify-content: center;  
+        text-align: center;
     }
     .rows {
         display: flex;
@@ -128,9 +144,9 @@
     .column {
         display: flex;
         flex-direction: row;
-        justify-content: center;    
-        width: 500px;
+        justify-content: center;  
         text-align: center;
+        width: 500px;
     }
     .canvasjs-chart-canvas {
         width: 100% !important;
@@ -161,11 +177,11 @@
 }
 
 body {
-    background-image: -webkit-gradient( radial, 55% 50%, 0, 50% 50%, 1000, from(rgb(207, 241, 206)), to(rgb(98, 195, 233)));
+    background-color: white;
 }
 
 footer {
     margin: 5px;
-    margin-top: 
 }
+
 
