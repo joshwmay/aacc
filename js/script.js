@@ -1,105 +1,3 @@
-var data1 = [{
-    label: 'Harford Community College',
-    y: 152.6
-}, {
-    label: 'Hagerstown Community College',
-    y: 264.6
-}, {
-    label: 'Howard Community College',
-    y: 301.2
-}, {
-    label: 'Baltimore City Community College',
-    y: 308.2
-}, {
-    label: 'Cecil College',
-    y: 309.6
-}, {
-    label: 'Carroll Community College',
-    y: 313
-}, {
-    label: 'Allegany College of Maryland',
-    y: 313.8
-}, {
-    label: 'Wor-Wic Community College',
-    y: 319.6
-}, {
-    label: 'Chesapeake College',
-    y: 320.6
-}, {
-    label: 'Garrett College',
-    y: 332.8
-}, {
-    label: "Prince George's Community College",
-    y: 350.0
-}, {
-    label: 'Community College of Baltimore County',
-    y: 372.8
-}, {
-    label: 'College of Southern Maryland',
-    y: 375.6
-}, {
-    label: 'Frederick Community College',
-    y: 389.6
-}, {
-    label: 'Anne Arundel Community College',
-    y: 411.8,
-    indexLabel: "AACC",
-}, {
-    label: 'Montgomery College',
-    y: 451.2
-}];
-var data2 = [{
-    label: 'Chesapeake College',
-    y: -8.9
-}, {
-    label: 'College of Southern Maryland',
-    y: -4.8
-}, {
-    label: 'Baltimore City Community College',
-    y: +2.4
-}, {
-    label: "Prince George's Community College",
-    y: +4.3
-}, {
-    label: 'Cecil College',
-    y: +4.7
-}, {
-    label: 'Hagerstown Community College',
-    y: +5.1
-}, {
-    label: 'Garrett College',
-    y: +5.2
-}, {
-    label: 'Wor-Wic Community College',
-    y: +7.8
-}, {
-    label: 'Frederick Community College',
-    y: +8.9
-}, {
-    label: 'Montgomery College',
-    y: +8.9
-}, {
-    label: 'Anne Arundel Community College',
-    y: +10.8,
-    indexLabel: "AACC",
-}, {
-    label: 'Howard Community College',
-    y: +12.5
-}, {
-    label: 'Harford Community College',
-    y: +14.2
-}, {
-    label: 'Allegany College of Maryland',
-    y: +23
-}, {
-    label: 'Community College of Baltimore County',
-    y: +28.4
-}, {
-    label: 'Carroll Community College',
-    y: +37.1
-},
-
-];
 function chart1(data) {
   var cont1 = document.getElementById("chart1");
   var chart1 = new CanvasJS.Chart(cont1, {
@@ -146,7 +44,7 @@ function chart1(data) {
   });
   return chart1.render()
 };
-function chart2(data) {
+function chart2(data,data2) {
     var cont2 = document.getElementById("chart2");
     
     var chart2 = new CanvasJS.Chart(cont2, {
@@ -189,8 +87,18 @@ function chart2(data) {
             legendMarkerType: "square",
             type: "line",
             color: "blue",
-            markerSize: 4,
+            markerSize: 8,
             dataPoints: data
+        },
+        {
+            name: "Zeroline",
+            showInLegend: false,
+            toolTipContent: '',
+            legendMarkerType: "square",
+            type: "line",
+            color: "white",
+            markerSize: 0,
+            dataPoints: data2
         }]
     }); 
     return chart2.render()   
@@ -411,6 +319,7 @@ window.addEventListener("load", () => {
         label: 'Anne Arundel Community College',
         y: 411.8,
         indexLabel: "AACC",
+        indexLabelFontColor: "white"
     }, {
         label: 'Montgomery College',
         y: 451.2
@@ -449,6 +358,7 @@ window.addEventListener("load", () => {
         label: 'Anne Arundel Community College',
         y: +10.8,
         indexLabel: "AACC",
+        indexLabelFontColor: "white"
     }, {
         label: 'Howard Community College',
         y: +12.5
@@ -466,9 +376,44 @@ window.addEventListener("load", () => {
         y: +37.1
     },
     
+    
+    ];
+    var zero = [{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    },{
+        y: 0
+    }    
     ];
     chart1(data1);
-    chart2(data2);
+    chart2(data2,zero);
     mapper();
     startPage();
  })

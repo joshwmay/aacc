@@ -6,6 +6,13 @@
 @-ms-viewport {
     width: device-width;
 }
+#topleft h1{
+    font-size: xx-large;
+}
+
+#topleft h3{
+    font-size: x-large;
+}
 #map.section {
     display: flex;
     flex-direction: column;
@@ -25,6 +32,10 @@
 }
 .breaker {
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
     align-content: flex-start;
     width: 100%;
@@ -37,8 +48,13 @@
     border-radius: 15px;
 }
 
-.breaker h2,
 .breaker p{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    font-size: xx-large;
+}
+.breaker h2{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 10px;
