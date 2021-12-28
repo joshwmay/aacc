@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="css/styles.css" rel="stylesheet" />
-    <title>Presentation slides for research analyst interview</title>
+    <title>Presentational dashboard for research analyst interview</title>
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="/media/admin/style-assets/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
@@ -35,12 +35,14 @@
         <div class="rows">
             <div class="column" id="topleft">
                 <h1>Anne Arundel Community College</h1>
-                <h3><b>#5</b> Community College in Maryland for students 25 and older</h3>
-                <h3><b>#10</b> in Maryland(all higher education): Student population</h3>
-                <h3><b>Celebrated its 60th year in 2021</b></h3>
+                <h3><b><i>#2</i></b> Community College in Maryland for GI Bill recipients</h3>
+                <h3><b><i>#3</i></b> in Maryland(Community Colleges): Student population</h3>
+                <h3><b><i>#5</i></b> Community College in Maryland for students 25 and older</h3>
+                <h3><b><i>#10</i></b> in Maryland(all higher education): Student population</h3>
+                <h3><b><u>Celebrated its 60th year in 2021</u></b></h3>
             </div>
             <div class="divider"></div>
-            <div class="column" id="topright">
+            <div class="column" id="topright" title="Line chart of schools by average tuition price change % 2017 - 2021">
                 <h1>Tuition Change %<br>
                 </h1>
 
@@ -48,15 +50,15 @@
             </div>
         </div>
         <div class="rows">
-            <div class="column" id="bottomleft" screentip="Bar chart of schools by average tuition">
+            <div class="column" id="bottomleft" title="Bar chart of schools by average tuition">
                 <h1>
                     Tuition<br>
                 </h1>
-                <div id="chart1" screentip="Bar chart of schools by average tuition"></div>
+                <div id="chart1" title="Bar chart of schools by average tuition"></div>
             </div>
             <div class="divider"></div>
             <div id="bottomright">
-                <div class="section" id="map">
+                <div class="section" title="Map of Maryland Community Colleges including details about the student body" id="map">
                     <h1>Maryland Community Colleges</h1>
                     <div id="mapid"></div>
                 </div>
