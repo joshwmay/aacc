@@ -93,8 +93,7 @@ function chart2(data,data2) {
         {
             name: "Zeroline",
             showInLegend: false,
-            toolTipContent: '',
-            legendMarkerType: "square",
+            legendMarkerType: "none",
             type: "line",
             color: "white",
             markerSize: 0,
@@ -102,6 +101,106 @@ function chart2(data,data2) {
         }]
     }); 
     return chart2.render()   
+
+}
+function chart3(data1,data2,data3, data4, data5, data6) {
+    var cont3 = document.getElementById("chart3");
+    
+    var chart3 = new CanvasJS.Chart(cont3, {
+        backgroundColor: null,
+        animationEnabled: true,
+        axisX: {
+            labelFontColor: "",
+            interval: 1,
+            gridThickness: 0,
+            tickLength: 0,
+            lineColor: "white",
+        },
+        axisY: {
+            maximum: 150000,
+            minimum: 0,
+            interval: 25000,
+            gridThickness: 0,
+            tickLength: 1,
+            prefix: "",
+            suffix: "%",
+            includeZero: true,
+            lineColor: "white",
+            labelFontColor: "white",
+        },
+        legend: {
+            verticalAlign: "top",
+            horizontalAlign: "right",
+            dockInsidePlotArea: true,
+            fontColor: "white"
+        },
+        toolTip: {
+            enabled: true, //disable here
+            animationEnabled: true, //disable here
+            shared: true
+        },
+        data: [{
+            name: "Listed Average",
+            showInLegend: true,
+            toolTipContent: 'School: {label}<br>Avg Listed Salary: ${y}',
+            legendMarkerType: "square",
+            type: "area",
+            color: "blue",
+            markerSize: 8,
+            dataPoints: data1
+        },
+        {
+            name: "Calculated Average",
+            showInLegend: true,
+            toolTipContent: 'Avg Calculated Salary: ${y}',
+            legendMarkerType: "square",
+            type: "line",
+            color: "white",
+            markerSize: 0,
+            dataPoints: data2
+        },
+        {
+            name: "Professor Salary",
+            showInLegend: true,
+            toolTipContent: 'Professor Salary: ${y}',
+            legendMarkerType: "square",
+            type: "line",
+            color: "red",
+            markerSize: 0,
+            dataPoints: data3
+        },
+        {
+            name: "Assoc Professor Salary",
+            showInLegend: true,
+            toolTipContent: 'Assoc Professor Salary: ${y}',
+            legendMarkerType: "square",
+            type: "line",
+            color: "green",
+            markerSize: 0,
+            dataPoints: data4
+        },
+        {
+            name: "Asst Professor Salary",
+            showInLegend: true,
+            toolTipContent: 'Asst Professor Salary: ${y}',
+            legendMarkerType: "square",
+            type: "line",
+            color: "magenta",
+            markerSize: 0,
+            dataPoints: data5
+        },
+        {
+            name: "Instructor Salary",
+            showInLegend: true,
+            toolTipContent: 'Instructor Salary: ${y}',
+            legendMarkerType: "square",
+            type: "column",
+            color: "purple",
+            markerSize: 0,
+            dataPoints: data6
+        }]
+    }); 
+    return chart3.render()   
 
 }
 function mapper() { 
@@ -273,7 +372,8 @@ function mapper() {
 //     Slides.animate();
 // };
 window.addEventListener("load", () => { 
-    var data1 = [{
+    var data1 = [
+        {
         label: 'Harford Community College',
         y: 152.6
     }, {
@@ -324,7 +424,8 @@ window.addEventListener("load", () => {
         label: 'Montgomery College',
         y: 451.2
     }];
-    var data2 = [{
+    var data2 = [
+        {
         label: 'Chesapeake College',
         y: -8.9
     }, {
@@ -378,7 +479,8 @@ window.addEventListener("load", () => {
     
     
     ];
-    var zero = [{
+    var zero = [
+        {
         y: 0
     },{
         y: 0
@@ -412,8 +514,123 @@ window.addEventListener("load", () => {
         y: 0
     }    
     ];
+    var sal1 = [
+        {label:'Allegany',y:58111},
+        {label:'Baltimore County',y:62214},
+        {label:'Howard',y:63963},
+        {label:'Harford',y:64653},
+        {label:'Hagerstown',y:65600},
+        {label:'Wor-Wic',y:66401},
+        {label:'Carroll',y:68616},
+        {label:'Baltimore City',y:69942},
+        {label:'Cecil',y:71794},
+        {label:'Garrett',y:73286},
+        {label:'Anne Arundel',y:77445},
+        {label:'Southern MD',y:80123},
+        {label:'Montgomery',y:81494},
+        {label:'Frederick',y:82193},
+        {label:'Chesapeake',y:84469},
+        {label:"Prince George's",y:91251},
+      
+    ];
+    var sal2 = [
+        {label:'Allegany',y:57397},
+        {label:'Baltimore County',y:61972.4},
+        {label:'Howard',y:69518.67},
+        {label:'Harford',y:66010},
+        {label:'Hagerstown',y:63340.33},
+        {label:'Wor-Wic',y:68006.25},
+        {label:'Carroll',y:63547.5},
+        {label:'Baltimore City',y:62099.67},
+        {label:'Cecil',y:72901.25},
+        {label:'Garrett',y:74298},
+        {label:'Anne Arundel',y:74465.5,},
+        {label:'Southern MD',y:72097},
+        {label:'Montgomery',y:77464.5},
+        {label:'Frederick',y:82617.5},
+        {label:'Chesapeake',y:75114.25},
+        {label:"Prince George's",y:79650.75},
+
+    ];
+    var prof = [
+        {label:'Allegany',y:68834},
+        {label:'Baltimore County',y:78094},
+        {label:'Howard',y:82604},
+        {label:'Harford',y:81758},
+        {label:'Hagerstown',y:71250},
+        {label:'Wor-Wic',y:81320},
+        {label:'Carroll',y:83702},
+        {label:'Baltimore City',y:53069},
+        {label:'Cecil',y:84311},
+        {label:'Garrett',y:87668},
+        {label:'Anne Arundel',y:90671,
+        indexLabel: "AACC",
+        indexLabelFontColor: "white"},
+        {label:'Southern MD',y:89431},
+        {label:'Montgomery',y:94502},
+        {label:'Frederick',y:104031},
+        {label:'Chesapeake',y:93391},
+        {label:"Prince George's",y:95673},
+
+    ];
+    var ascprof = [
+        {label:'Allegany',y:58677},
+        {label:'Baltimore County',y:70470},
+        {label:'Howard',y:66984},
+        {label:'Harford',y:65300},
+        {label:'Hagerstown',y:59249},
+        {label:'Wor-Wic',y:71653},
+        {label:'Carroll',y:66154},
+        {label:'Baltimore City',y:70978},
+        {label:'Cecil',y:76841},
+        {label:'Garrett',y:71675},
+        {label:'Anne Arundel',y:78391},
+        {label:'Southern MD',y:75880},
+        {label:'Montgomery',y:79237},
+        {label:'Frederick',y:88584},
+        {label:'Chesapeake',y:74440},
+        {label:"Prince George's",y:78782},
+
+    ];
+    var astprof = [
+        {label:'Allegany',y:53402},
+        {label:'Baltimore County',y:56142},
+        {label:'Howard',y:58968},
+        {label:'Harford',y:61845},
+        {label:'Hagerstown',y:59522},
+        {label:'Wor-Wic',y:60874},
+        {label:'Carroll',y:60684},
+        {label:'Baltimore City',y:62252},
+        {label:'Cecil',y:70585},
+        {label:'Garrett',y:63551},
+        {label:'Anne Arundel',y:68118},
+        {label:'Southern MD',y:69227},
+        {label:'Montgomery',y:71153},
+        {label:'Frederick',y:74539},
+        {label:'Chesapeake',y:68806},
+        {label:"Prince George's",y:73840},
+    ]
+    var inst = [
+        {label:'Allegany',y:48675},
+{label:'Baltimore County',y:48416},
+{label:'Howard',y: ''},
+{label:'Harford',y:55137},
+{label:'Hagerstown',y: ''},
+{label:'Wor-Wic',y:58178},
+{label:'Carroll',y:43650},
+{label:'Baltimore City',y:''},
+{label:'Cecil',y:59868},
+{label:'Garrett',y:''},
+{label:'Anne Arundel',y:60682},
+{label:'Southern MD',y:53850},
+{label:'Montgomery',y:64966},
+{label:'Frederick',y:63316},
+{label:'Chesapeake',y:63820},
+{label:"Prince George's",y:70308},
+
+    ]
     chart1(data1);
     chart2(data2,zero);
+    chart3(sal1, sal2, prof, ascprof, astprof, inst);
     mapper();
-    startPage();
  })
