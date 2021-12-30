@@ -1,10 +1,10 @@
 function chart1(data) {
     var cont1 = document.getElementById("chart1");
     var chart1 = new CanvasJS.Chart(cont1, {
-        backgroundColor: null,
+        backgroundColor: "rgb(0, 71, 79, 0.35)",
         animationEnabled: true,
         axisX: {
-            labelFontColor: "",
+            labelFontColor: "rgba(0, 0, 0, 0.001)",
             interval: 1,
             gridThickness: 0,
             tickLength: 0,
@@ -49,10 +49,10 @@ function chart2(data, data2) {
     var cont2 = document.getElementById("chart2");
 
     var chart2 = new CanvasJS.Chart(cont2, {
-        backgroundColor: null,
+        backgroundColor: "rgb(0, 71, 79, 0.35)",
         animationEnabled: true,
         axisX: {
-            labelFontColor: "",
+            labelFontColor: "rgba(0, 0, 0, 0.001)",
             interval: 1,
             gridThickness: 0,
             tickLength: 0,
@@ -94,9 +94,10 @@ function chart2(data, data2) {
             {
                 name: "Zeroline",
                 showInLegend: false,
-                legendMarkerType: "none",
+                legendMarkerType: null,
                 type: "line",
                 color: "white",
+                toolTipContent: " ",
                 markerSize: 0,
                 dataPoints: data2
             }
@@ -110,10 +111,10 @@ function chart3(data1, data2, data3, data4, data5, data6) {
     var cont3 = document.getElementById("chart3");
 
     var chart3 = new CanvasJS.Chart(cont3, {
-        backgroundColor: null,
+        backgroundColor: "rgb(0, 71, 79, 0.35)",
         animationEnabled: true,
         axisX: {
-            labelFontColor: "",
+            labelFontColor: "rgba(0, 0, 0, 0.001)",
             interval: 1,
             gridThickness: 0,
             tickLength: 0,
