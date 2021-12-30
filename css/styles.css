@@ -6,14 +6,6 @@
 @-ms-viewport {
     width: device-width;
 }
-#mapid,
-    #chart1,
-    #chart2,
-    #chart3,
-    #bigchart,
-    #chart4 {
-        border-radius: 16px;
-    }
 #topleft {
     display: flex;
     justify-content: center;
@@ -28,7 +20,7 @@
 #header{
     background-color: rgba(0, 117, 130, 0.85);
     border-radius: 16px;
-    outline: #003940 solid 1px;
+    box-shadow: 2px 2px #003940;
     width: 98%;
     height: auto;
     margin-top: 1%;
@@ -52,6 +44,7 @@ body {
     align-items: center;
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
@@ -61,7 +54,8 @@ body {
     height: 95%;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 6px;
+    border-radius: 6px;    
+    box-shadow: 2px 2px #003940;
 }
 
 
@@ -87,6 +81,16 @@ body {
     font-size: 26px;
 }
 
+#mainbreaker,
+#topleft,
+#topright,
+#bottomleft,
+#bottomright,
+#bigchart,
+#closer,
+footer {
+    box-shadow: 2px 2px #00BACF;
+}
 .breaker h2 {
     font-size: 40px;
     text-shadow: 2px 2px #00028270;
@@ -322,7 +326,7 @@ footer {
 
 .stage {
     margin: 1%;
-    box-shadow: 2px 2px #00028270;
+    box-shadow: 2px 2px #003940;
 }
 
 body {
