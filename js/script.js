@@ -170,7 +170,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 toolTipContent: 'Asst Professor Salary: ${y}',
                 legendMarkerType: "square",
                 type: "area",
-                color: "magenta",
+                color: "purple",
                 markerSize: 4,
                 dataPoints: data4
             },
@@ -180,7 +180,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 toolTipContent: 'Instructor Salary: ${y}',
                 legendMarkerType: "square",
                 type: "column",
-                color: "purple",
+                color: "#ad931d",
                 markerSize: 4,
                 dataPoints: data5
             }
