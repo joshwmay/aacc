@@ -6,7 +6,6 @@
 @-ms-viewport {
     width: device-width;
 }
-
 #mapid,
     #chart1,
     #chart2,
@@ -25,11 +24,14 @@
 #bottomleft h1,
 #bottomright h1,
 #bigchart h1,
-#closer h1{
+#closer h1,
+#header{
     background-color: rgba(0, 117, 130, 0.85);
     border-radius: 16px;
     outline: #003940 solid 1px;
     width: 98%;
+    height: auto;
+    margin-top: 1%;
 }
 #topleft h1 {
     display: flex;
@@ -76,12 +78,13 @@ body {
     margin-bottom: 2px;
 }
 #mainbreaker h2 { 
-    font-size: 30px;
+    font-size: 28px;
     margin-top: -4px;
 }
 
 #mainbreaker p {
     margin-top: 10px;
+    font-size: 26px;
 }
 
 .breaker h2 {
