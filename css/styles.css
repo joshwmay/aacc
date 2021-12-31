@@ -7,6 +7,10 @@
     width: device-width;
 }
 
+h1 {
+    letter-spacing: -2px;
+}
+
 #topleft {
     display: flex;
     justify-content: center;
@@ -117,7 +121,10 @@ body {
 #bigchart,
 #closer,
 footer {
-    box-shadow: 2px 2px #00BACF;
+    box-shadow: 2px 8px #00bacfa4;
+    box-shadow: -2px 8px #00bacfa4;
+    box-shadow: -2px .5px #a76004de;
+    box-shadow: 2px .5px #a76004de;
 }
 
 .breaker h2 {
@@ -130,7 +137,7 @@ footer {
 
 #topleft h3 {
     text-shadow: 2px 2px #00028270;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 h3 {
@@ -177,7 +184,6 @@ h3 {
     align-content: flex-start;
     width: 100%;
     height: auto;
-    font-family: "Palatino", sans-serif;
     font-size: 20px;
     letter-spacing: -1px;
     background-color: #007582bf;
@@ -195,7 +201,6 @@ footer {
     text-align: flex-start;
     align-content: flex-start;
     width: 90%;
-    font-family: "Palatino", sans-serif;
     font-size: 20px;
     letter-spacing: -1px;
     background-color: #007582bf;
@@ -223,16 +228,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-    h1 {
-        color: white;
-        letter-spacing: -2px;
-        font-family: "Palatino", sans-serif;
-    }
-    h3 {
-        color: white;
-        font-family: "Palatino", sans-serif;
-        letter-spacing: -1px;
-    }
     #topleft,
     #topright,
     #bottomleft,
@@ -287,12 +282,10 @@ footer {
     h1 {
         font-size: -2px;
         letter-spacing: -2px;
-        font-family: "Palatino", sans-serif;
         color: white;
     }
     h3 {
         color: white;
-        font-family: "Palatino", sans-serif;
         letter-spacing: -1px;
     }
     #topleft,
@@ -359,4 +352,5 @@ footer {
 
 body {
     background-color: white;
+    font-family: 'Lucida Sans Regular', 'Geneva', 'Verdana'
 }
