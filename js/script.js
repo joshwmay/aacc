@@ -1,4 +1,4 @@
-function chart1(data) {
+function chart1(data1, data2, data3) {
     var cont1 = document.getElementById("chart1");
     var chart1 = new CanvasJS.Chart(cont1, {
         backgroundColor: "rgb(0, 71, 79, 0.35)",
@@ -27,25 +27,43 @@ function chart1(data) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, //disable here
-            animationEnabled: true, //disable here
+            enabled: true, 
+            animationEnabled: true, 
             shared: true
         },
         data: [{
-            name: "Avg Tuition 2017-2021",
+            name: "Residential Tuition",
             showInLegend: true,
-            toolTipContent: 'School: {label} <br>Avg Cost: ${y} credit hour',
+            toolTipContent: 'School: {label} <br>Resident: ${y}',
+            legendMarkerType: "",
+            type: "area",
+            color: "#FA6F50",
+            markerSize: 6,
+            dataPoints: data1
+        },{
+            name: "Out of Area Tuition",
+            showInLegend: true,
+            toolTipContent: 'Out of Area: ${y}',
             legendMarkerType: "square",
-            type: "column",
-            color: "#E3611B",
-            markerSize: 12,
-            dataPoints: data
-        }]
+            type: "line",
+            color: "#993426",
+            markerSize: 8,
+            dataPoints: data2
+        },{
+            name: "Out of State Tuition",
+            showInLegend: true,
+            toolTipContent: 'Out of State: ${y}',
+            legendMarkerType: "square",
+            type: "line",
+            color: "#22D6E6",
+            markerSize: 8,
+            dataPoints: data3
+        },]
     });
     return chart1.render()
 };
 
-function chart2(data, data2) {
+function chart2(data, data2, data3) {
     var cont2 = document.getElementById("chart2");
 
     var chart2 = new CanvasJS.Chart(cont2, {
@@ -77,17 +95,26 @@ function chart2(data, data2) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, //disable here
-            animationEnabled: true, //disable here
+            enabled: true, 
+            animationEnabled: true, 
             shared: true
         },
         data: [{
-                name: "% Change 2017-2021",
+            name: "1yr Change",
+            showInLegend: true,
+            toolTipContent: 'School: {label}<br>1yr Change: {y}%',
+            legendMarkerType: "square",
+            type: "line",
+            color: "#22D6E6",
+            markerSize: 8,
+            dataPoints: data3
+        },{
+                name: "5yr Change",
                 showInLegend: true,
-                toolTipContent: 'School: {label}<br>Avg Change: {y}%',
+                toolTipContent: '5yr Change: {y}%',
                 legendMarkerType: "square",
                 type: "line",
-                color: "blue",
+                color: "#993426",
                 markerSize: 8,
                 dataPoints: data
             },
@@ -121,7 +148,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             lineColor: "white",
         },
         axisY: {
-            maximum: 125000,
+            maximum: 115000,
             minimum: 0,
             interval: 25000,
             includeZero: false,
@@ -129,7 +156,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             tickLength: 1,
             prefix: "",
             suffix: "",
-            valueFormatString: "$##,##0.0",
+            valueFormatString: "$0.",
             includeZero: true,
             lineColor: "white",
             labelFontColor: "white",
@@ -141,8 +168,8 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, //disable here
-            animationEnabled: true, //disable here
+            enabled: true, 
+            animationEnabled: true, 
             shared: true
         },
         data: [{
@@ -200,142 +227,92 @@ function mapper() {
         zoomOffset: -1,
     }).addTo(mymap);
     var circle = L.circle([39.05002999594673, -76.51384918500835], 6000, {
-        color: 'red',
-        fillColor: '#f03',
+        color: '#993426',
+        fillColor: '#993426',
         fillOpacity: 0.5,
         radius: 50
-    }).addTo(mymap).bindPopup("<b><a href='https://www.aacc.edu/'>Anne Arundel Community College</a></b><br><b>Student Body:</b> 12,655<br>(#3 in Size amongst MD CC's & #8 All of MD)<br><b>$ Per Credit Hour:</b>  $411.80<br><b>Students 25 and Older:</b>  #5<br><b>GI Bill Student%:</b>  5.6%<br>(#2 in Maryland CC's)");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.aacc.edu/'>Anne Arundel Community College</a></b><br><b>Student Body:</b> 12,655<br>(#3 in Size amongst MD CC's & #8 All of MD)<br><b>$ Per Credit Hour:</b>  $411.80<br><b>Students 25 and Older:</b>  #5<br><b>GI Bill Student%:</b>  5.6%<br>(#2 in Maryland CC's)<br><b>Vaccine Req: </b>Required");
     var circle = L.circle([39.3206170291295, -76.6613018002544], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.bccc.edu/'>Baltimore City Community College</a></b><br><b>Student Body:</b> 4,909<br><b>$ Per Credit Hour:</b>  $308.20<br><b>Students 25 and Older:</b>  #1<br><b>GI Bill Student%:</b>  1.8%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.bccc.edu/'>Baltimore City Community College</a></b><br><b>Student Body:</b> 4,909<br><b>$ Per Credit Hour:</b>  $308.20<br><b>Students 25 and Older:</b>  #1<br><b>GI Bill Student%:</b>  1.8%<br><b>Vaccine Req: </b><i>Not listed</i>");
     var circle = L.circle([39.53183213962793, -76.99109095421696], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.allegany.edu/'>Allegany College of Maryland</a></b><br><b>Student Body:</b> 2,584<br><br><b>GI Bill Student%:</b>  1.8%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.allegany.edu/'>Allegany College of Maryland</a></b><br><b>Student Body:</b> 2,584<br><br><b>GI Bill Student%:</b>  1.8%<br><b>Vaccine Req: </b>Required for Housing<br>No for Commuters");
     var circle = L.circle([39.64116925792962, -75.95647399326049], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://cecil.edu/'>Cecil College</a></b><br><b>Student Body:</b> 2,377<br><b>$ Per Credit Hour:</b>  $309.60<br><b>Students 25 and Older:</b>  #9<br><b>GI Bill Student%:</b>  3.6%<br>(#5 in Maryland CC's)");
+    }).addTo(mymap).bindPopup("<b><a href='http://cecil.edu/'>Cecil College</a></b><br><b>Student Body:</b> 2,377<br><b>$ Per Credit Hour:</b>  $309.60<br><b>Students 25 and Older:</b>  #9<br><b>GI Bill Student%:</b>  3.6%<br>(#5 in Maryland CC's)<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([38.95275598286228, -76.08110479258522], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.chesapeake.edu/'>Chesapeake College</a></b><br><b>Student Body:</b> 2,184<br><b>$ Per Credit Hour:</b>  $320.60<br><b>Students 25 and Older:</b>  #13<br><b>GI Bill Student%:</b>  1.6%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.chesapeake.edu/'>Chesapeake College</a></b><br><b>Student Body:</b> 2,184<br><b>$ Per Credit Hour:</b>  $320.60<br><b>Students 25 and Older:</b>  #13<br><b>GI Bill Student%:</b>  1.6%<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([38.55961742722099, -77.00892890675182], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.csmd.edu/'>College of Southern Maryland</a></b><br><b>Student Body:</b> 6,351<br><b>$ Per Credit Hour:</b>  $375.60<br><b>Students 25 and Older:</b>  #11<br><b>GI Bill Student%:</b>  7.5%<br>(#1 in Maryland CC's)");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.csmd.edu/'>College of Southern Maryland</a></b><br><b>Student Body:</b> 6,351<br><b>$ Per Credit Hour:</b>  $375.60<br><b>Students 25 and Older:</b>  #11<br><b>GI Bill Student%:</b>  7.5%<br>(#1 in Maryland CC's)<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([39.35364008477602, -76.4823566374394], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.ccbcmd.edu/'>Community College of Baltimore County</a></b><br><b>Student Body:</b> 17,732<br>(#2 in Size amongst MD & CC's #6 All of MD)<br><b>$ Per Credit Hour:</b>  $372.80<br><b>Students 25 and Older:</b>  #2<br><b>GI Bill Student%:</b>  .8%");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.ccbcmd.edu/'>Community College of Baltimore County</a></b><br><b>Student Body:</b> 17,732<br>(#2 in Size amongst MD & CC's #6 All of MD)<br><b>$ Per Credit Hour:</b>  $372.80<br><b>Students 25 and Older:</b>  #2<br><b>GI Bill Student%:</b>  .8%<br><b>Vaccine Req: </b><i>'No, Only required for some health professions students'");
     var circle = L.circle([39.451979960641104, -77.4184624490804], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.frederick.edu/'>Frederick Community College</a></b><br><b>Student Body:</b> 6,129<br><b>$ Per Credit Hour:</b>  $389.60<br><b>Students 25 and Older:</b>  #12<br><b>GI Bill Student%:</b>  3.8%<br>(#4 in Maryland CC's)");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.frederick.edu/'>Frederick Community College</a></b><br><b>Student Body:</b> 6,129<br><b>$ Per Credit Hour:</b>  $389.60<br><b>Students 25 and Older:</b>  #12<br><b>GI Bill Student%:</b>  3.8%<br>(#4 in Maryland CC's)<br><b>Vaccine Req: </b>Not required, will be Spring '22");
     var circle = L.circle([39.56088682063832, -79.34275053559213], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.garrettcollege.edu/'>Garret College</a></b><br><b>Student Body:</b> 651<br><b>$ Per Credit Hour:</b>  $332.80<br><b>Students 25 and Older:</b>  #16<br><b>GI Bill Student%:</b>  1.8%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.garrettcollege.edu/'>Garrett College</a></b><br><b>Student Body:</b> 651<br><b>$ Per Credit Hour:</b>  $332.80<br><b>Students 25 and Older:</b>  #16<br><b>GI Bill Student%:</b>  1.8%<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([39.63194874917637, -77.66902870304568], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.hagerstowncc.edu/'>Hagerstown Community College</a></b><br><b>Student Body:</b> 3,848<br><b>$ Per Credit Hour:</b>  $264.60<br><b>Students 25 and Older:</b>  #8<br><b>GI Bill Student%:</b>  3.0%");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.hagerstowncc.edu/'>Hagerstown Community College</a></b><br><b>Student Body:</b> 3,848<br><b>$ Per Credit Hour:</b>  $264.60<br><b>Students 25 and Older:</b>  #8<br><b>GI Bill Student%:</b>  3.0%<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([39.56034703621479, -76.28449202024339], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.harford.edu/'>Harford Community College</a></b><br><b>Student Body:</b> 5,705<br><b>$ Per Credit Hour:</b>  $152.60<br><b>Students 25 and Older:</b>  #10<br><b>GI Bill Student%:</b>  2.7%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.harford.edu/'>Harford Community College</a></b><br><b>Student Body:</b> 5,705<br><b>$ Per Credit Hour:</b>  $152.60<br><b>Students 25 and Older:</b>  #10<br><b>GI Bill Student%:</b>  2.7%<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([39.21243733541452, -76.87831298955557], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.howardcc.edu/'>Howard Community College</a></b><br><b>Student Body:</b> 9,110<br>(#5 in Size amongst MD CC's & #10 All of MD)<br><b>$ Per Credit Hour:</b>  $301.20<br><b>Students 25 and Older:</b>  #6<br><b>GI Bill Student%:</b>  3.4%");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.howardcc.edu/'>Howard Community College</a></b><br><b>Student Body:</b> 9,110<br>(#5 in Size amongst MD CC's & #10 All of MD)<br><b>$ Per Credit Hour:</b>  $301.20<br><b>Students 25 and Older:</b>  #6<br><b>GI Bill Student%:</b>  3.4%<br><b>Vaccine Req: </b>Not required, will be Spring '22");
     var circle = L.circle([39.10009657780947, -77.157878462514], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.montgomerycollege.edu/'>Montgomery College</a></b><br><b>Student Body:</b> 21,260<br>(#1 in Size amongst MD CC's & #5 All of MD)<br><b>$ Per Credit Hour:</b>  $451.20<br><b>Students 25 and Older:</b>  #7<br><b>GI Bill Student%:</b>  1.7%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.montgomerycollege.edu/'>Montgomery College</a></b><br><b>Student Body:</b> 21,260<br>(#1 in Size amongst MD CC's & #5 All of MD)<br><b>$ Per Credit Hour:</b>  $451.20<br><b>Students 25 and Older:</b>  #7<br><b>GI Bill Student%:</b>  1.7%<br><b>Vaccine Req: </b>Not required, Will be as of 1/7/2022");
     var circle = L.circle([38.88684458754917, -76.82660986257397], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='https://www.pgcc.edu/'>Prince George's Community College</a></b><br><b>Student Body:</b> 11,788<br>(#4 in Size amongst MD CC's #9 All of MD)<br><b>$ Per Credit Hour:</b>  $350.00<br><b>Students 25 and Older:</b>  #3<br><b>GI Bill Student%:</b>  3.1%");
+    }).addTo(mymap).bindPopup("<b><a href='https://www.pgcc.edu/'>Prince George's Community College</a></b><br><b>Student Body:</b> 11,788<br>(#4 in Size amongst MD CC's #9 All of MD)<br><b>$ Per Credit Hour:</b>  $350.00<br><b>Students 25 and Older:</b>  #3<br><b>GI Bill Student%:</b>  3.1%<br><b>Vaccine Req: </b>Required");
     var circle = L.circle([38.374571849605964, -75.49990880489847], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.worwic.edu/'>Wor-Wic Community College</a></b><br><b>Student Body:</b> 2,890<br><b>$ Per Credit Hour:</b>  $319.60<br><b>Students 25 and Older:</b>  #4<br><b>GI Bill Student%:</b>  5.1%<br>(#3 in Maryland CC's)");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.worwic.edu/'>Wor-Wic Community College</a></b><br><b>Student Body:</b> 2,890<br><b>$ Per Credit Hour:</b>  $319.60<br><b>Students 25 and Older:</b>  #4<br><b>GI Bill Student%:</b>  5.1%<br>(#3 in Maryland CC's)<br><b>Vaccine Req: </b>Not required");
     var circle = L.circle([39.53177007829051, -76.99130553102033], 6000, {
-        color: 'blue',
-        fillColor: 'lightblue',
+        color: '#3B47DB',
+        fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.carrollcc.edu/'>Carroll Community College</a></b><br><b>Student Body:</b> 3,115<br><b>$ Per Credit Hour:</b>  $313.00<br><b>Students 25 and Older:</b>  #15<br><b>GI Bill Student%:</b>  2.7.%");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.carrollcc.edu/'>Carroll Community College</a></b><br><b>Student Body:</b> 3,115<br><b>$ Per Credit Hour:</b>  $313.00<br><b>Students 25 and Older:</b>  #15<br><b>GI Bill Student%:</b>  2.7.%<br><b>Vaccine Req: </b>Not required");
     return mymap
 }
 
 window.addEventListener("load", () => {
-    var data1 = [{
-        label: 'Harford Community College',
-        y: 152.6
-    }, {
-        label: 'Hagerstown Community College',
-        y: 264.6
-    }, {
-        label: 'Howard Community College',
-        y: 301.2
-    }, {
-        label: 'Baltimore City Community College',
-        y: 308.2
-    }, {
-        label: 'Cecil College',
-        y: 309.6
-    }, {
-        label: 'Carroll Community College',
-        y: 313
-    }, {
-        label: 'Allegany College of Maryland',
-        y: 313.8
-    }, {
-        label: 'Wor-Wic Community College',
-        y: 319.6
-    }, {
-        label: 'Chesapeake College',
-        y: 320.6
-    }, {
-        label: 'Garrett College',
-        y: 332.8
-    }, {
-        label: "Prince George's Community College",
-        y: 350.0
-    }, {
-        label: 'Community College of Baltimore County',
-        y: 372.8
-    }, {
-        label: 'College of Southern Maryland',
-        y: 375.6
-    }, {
-        label: 'Frederick Community College',
-        y: 389.6
-    }, {
-        label: 'Anne Arundel Community College',
-        y: 411.8,
-        indexLabel: "AACC",
-        indexLabelFontColor: "white"
-    }, {
-        label: 'Montgomery College',
-        y: 451.2
-    }];
-    var data2 = [{
+    
+    var _5yr = [{
             label: 'Chesapeake College',
             y: -8.9
         }, {
@@ -483,7 +460,6 @@ window.addEventListener("load", () => {
         { label: 'Montgomery College', y: 95673 },
         { label: 'Community College of Baltimore County', y: 104031 }
     ];
-
     var ascprof = [
         { label: 'Allegany College of Maryland', y: 58677 },
         { label: 'Garrett College', y: 59249 },
@@ -558,86 +534,117 @@ window.addEventListener("load", () => {
         { label: 'Howard Community College', y: 77464.5 },
         { label: 'Montgomery College', y: 79650.75 },
         { label: 'Community College of Baltimore County', y: 82617.5 }
-    ]
-    chart1(data1);
-    chart2(data2, zero);
+    ];
+    var _1yr = [{
+        label: 'Chesapeake College',
+        y: .1
+    }, {
+        label: 'College of Southern Maryland',
+        y: .1
+    }, {
+        label: 'Baltimore City Community College',
+        y: 1.9
+    }, {
+        label: "Prince George's Community College",
+        y: -.8
+    }, {
+        label: 'Cecil College',
+        y: .3
+    }, {
+        label: 'Hagerstown Community College',
+        y: -2.4
+    }, {
+        label: 'Garrett College',
+        y: 6.8
+    }, {
+        label: 'Wor-Wic Community College',
+        y: 3.7
+    }, {
+        label: 'Frederick Community College',
+        y: 2.4
+    }, {
+        label: 'Montgomery College',
+        y: 0
+    }, {
+        label: 'Anne Arundel Community College',
+        y: 3.2
+    }, {
+        label: 'Howard Community College',
+        y: 3.1
+    }, {
+        label: 'Harford Community College',
+        y: 0
+    }, {
+        label: 'Allegany College of Maryland',
+        y: 2.9
+    }, {
+        label: 'Community College of Baltimore County',
+        y: 3.9
+    }, {
+        label: 'Carroll Community College',
+        y: .4
+    },
+
+
+];
+var res = [{label:'Wor-Wic Community College ',y:133.6},
+{label:'Hagerstown Community College ',y:136.4},
+{label:'Baltimore City Community College ',y:137.4},
+{label:'Anne Arundel Community College ',y:140},
+{label:'Garrett College ',y:142.6},
+{label:'Allegany College of Maryland ',y:144.8},
+{label:'Frederick Community College ',y:149.2},
+{label:'Harford Community College ',y:152.6},
+{label:'Prince George’s Community College ',y:155.4},
+{label:'Cecil College ',y:156},
+{label:'Chesapeake College ',y:157.6},
+{label:'College of Southern Maryland ',y:157.8},
+{label:'Howard Community College ',y:163.6},
+{label:'Community College of Baltimore County ',y:163.8},
+{label:'Carroll Community College ',y:164.8},
+{label:'Montgomery College ',y:171.2},
+];
+var oos = [
+    {label:'Wor-Wic Community College',y:319.6},
+    {label:'Hagerstown Community College',y:264.6},
+    {label:'Baltimore City Community College',y:308.2},
+    {label:'Anne Arundel Community College',y:411.8,
+    indexLabel: "AACC",
+    indexLabelFontColor: "white"},
+    {label:'Garrett College',y:332.8},
+    {label:'Allegany College of Maryland',y:313.8},
+    {label:'Frederick Community College',y:389.6},
+    {label:'Harford Community College',y:334},
+    {label:'Prince George’s Community College',y:350},
+    {label:'Cecil College',y:309.6},
+    {label:'Chesapeake College',y:320.6},
+    {label:'College of Southern Maryland',y:375.6},
+    {label:'Howard Community College',y:301.2},
+    {label:'Community College of Baltimore County',y:372.8},
+{label:'Carroll Community College',y:313},
+{label:'Montgomery College',y:451.2},
+];
+var ooa = [
+    {label:'Wor-Wic Community College',y:260.4},
+    {label:'Hagerstown Community College',y:204.2},
+    {label:'Baltimore City Community College',y:137.4},
+    {label:'Anne Arundel Community College',y:249},
+    {label:'Garrett College',y:282.8},
+    {label:'Allegany College of Maryland',y:258},
+    {label:'Frederick Community College',y:294.4},
+    {label:'Harford Community College',y:243.6},
+    {label:'Prince George’s Community College',y:249},
+    {label:'Cecil College',y:245.8},
+    {label:'Chesapeake College',y:236.6},
+    {label:'College of Southern Maryland',y:276.4},
+    {label:'Howard Community College',y:252.6},
+    {label:'Community College of Baltimore County',y:267},
+{label:'Carroll Community College',y:246.6},
+{label:'Montgomery College',y:330.6},
+
+];
+    chart1(res, ooa, oos);
+    chart2(_5yr, zero, _1yr);
     chart3(sal1, prof, ascprof, astprof, inst, calc_avg);
     mapper();
 })
-
-// function startPage() {    
-//     var passwordInput = document.getElementById('code');
-//     var passStatus = document.getElementById('pass-status');
-//     var click = document.getElementById('enter');
-//     if (passwordInput.type == 'password' & passwordInput.value === "pleasehire") {
-//         passwordInput.type = 'text';
-//         var Slides = {
-//             container: $('#slides'),
-//             totalSlides: '',
-//             translateAmount: 0,
-//             currentSlide: 0,
-//             slideWidth: '100px',
-//             slideHeight: '500px',
-//             init: function(totalSlides) {
-//                 var each;
-//                 if (!totalSlides) throw new Error('Please pass the total number of slides.');
-//                 Slides.totalSlides = totalSlides;
-//                 Slides.loadContent();
-//                 each = Slides.container.children('div');
-//                 Slides.slideWidth = each.width() + (parseInt(each.css('margin-right'), 10));
-//                 Slides.keyPress();
-//             },
-//             loadContent: function() {
-//                 Slides.container.hide();
-//                 for (var i = 0; i < Slides.totalSlides; i++) {
-//                     $('<div id="#slide-' + i + '"></div>')
-//                         .load('slides/' + i + '.html')
-//                         .appendTo(Slides.container);
-//                 }
-//                 Slides.container.show();
-//             },
-//             keyPress: function() {
-//                 $(document.body).keydown(function(e) {
-//                     if (e.keyCode === 39 || e.keyCode === 37) {
-//                         e.preventDefault();
-//                         (e.keyCode === 39) ? Slides.next(): Slides.prev();
-//                     }
-//                 });
-//             },
-//             next: function() {
-//                 Slides.translateAmount -= Slides.slideWidth;
-//                 Slides.updateHash(++Slides.currentSlide);
-//                 Slides.animate();
-//             },
-//             prev: function() {
-//                 if (Slides.translateAmount === 0) return;
-//                 Slides.translateAmount += Slides.slideWidth;
-//                 Slides.updateHash(--Slides.currentSlide);
-//                 Slides.animate();
-//             },
-//             animate: function() {
-//                 Slides
-//                     .container
-//                     .children()
-//                     .css('-webkit-transform', 'translateX(' + Slides.translateAmount + 'px)');
-//             },
-//             updateHash: function(direction) {
-//                 location.hash = '#slide-' + Slides.currentSlide;
-//             }
-//         };
-//         Slides.init(6);
-//     } else {
-//         passwordInput.type = 'password';
-//     }
-// }
-// function nxt() {
-//     Slides.translateAmount -= Slides.slideWidth;
-//     Slides.updateHash(++Slides.currentSlide);
-//     Slides.animate();
-// };
-// function prv() {
-//     if (Slides.translateAmount === 0) return;
-//     Slides.translateAmount += Slides.slideWidth;
-//     Slides.updateHash(--Slides.currentSlide);
-//     Slides.animate();
-// };
