@@ -11,12 +11,6 @@ h1 {
     letter-spacing: -2px;
 }
 
-#out_area,
-#out_state,
-#all {
-    display: none;
-}
-
 #bottomright h1,
 #topleft h1 {
     letter-spacing: -2px;
@@ -159,8 +153,8 @@ body {
 footer {
     box-shadow: 2px 8px #00bacfa4;
     box-shadow: -2px 8px #00bacfa4;
-    box-shadow: -2px .5px #a76004de;
-    box-shadow: 2px .5px #a76004de;
+    box-shadow: -2px .5px #554126de;
+    box-shadow: 2px .5px #554126de;
 }
 
 .breaker h2 {

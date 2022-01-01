@@ -1,18 +1,18 @@
 ﻿Institution,Professor,Associate Professor,Assistant Professor,Instructor,Lecturer, CAMPUS AVG,calc avg
-Allegany College of Maryland,68834,58677,53402,48675,-,58111,57397
-Garrett College,71250,59249,59522,-,,65600,63340.33333
+Allegany College of Maryland,68834,58677,53402,48675,0,58111,57397
+Garrett College,71250,59249,59522,0,,65600,63340.33333
 Carroll Community College,78094,70470,56142,48416,56740,62214,61972.4
-Wor-Wic Community College,81320,71653,60874,58178,-,66401,68006.25
-Hagerstown Community College,81758,65300,61845,55137,-,64653,66010
-Harford Community College,82604,66984,58968,-,-,63963,69518.66667
-Baltimore City Community College,83069,70978,62252,-,-,69942,72099.66667
-Cecil College,83702,66154,60684,43650,-,68616,63547.5
-Chesapeake College,84311,76841,70585,59868,-,71794,72901.25
-Frederick Community College,87668,71675,63551,-,-,73286,74298
-Prince George’s Community College,89431,75880,69227,53850,-,80123,72097
-Anne Arundel Community College,90671,78391,68118,60682,-,77445,74465.5
+Wor0Wic Community College,81320,71653,60874,58178,0,66401,68006.25
+Hagerstown Community College,81758,65300,61845,55137,0,64653,66010
+Harford Community College,82604,66984,58968,0,0,63963,69518.66667
+Baltimore City Community College,83069,70978,62252,0,0,69942,72099.66667
+Cecil College,83702,66154,60684,43650,0,68616,63547.5
+Chesapeake College,84311,76841,70585,59868,0,71794,72901.25
+Frederick Community College,87668,71675,63551,0,0,73286,74298
+Prince George’s Community College,89431,75880,69227,53850,0,80123,72097
+Anne Arundel Community College,90671,78391,68118,60682,0,77445,74465.5
 Community College Average,92067,77151,66741,58926,56740,78362,70325
-College of Southern Maryland,93391,74440,68806,63820,-,84469,75114.25
-Howard Community College,94502,79237,71153,64966,-,81494,77464.5
-Montgomery College,95673,78782,73840,70308,-,91251,79650.75
-Community College of Baltimore County,104031,88584,74539,63316,-,82193,82617.5
+College of Southern Maryland,93391,74440,68806,63820,0,84469,75114.25
+Howard Community College,94502,79237,71153,64966,0,81494,77464.5
+Montgomery College,95673,78782,73840,70308,0,91251,79650.75
+Community College of Baltimore County,104031,88584,74539,63316,0,82193,82617.5
