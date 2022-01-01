@@ -11,10 +11,24 @@ h1 {
     letter-spacing: -2px;
 }
 
+#out_area,
+#out_state,
+#all {
+    display: none;
+}
+
+#bottomright h1,
+#topleft h1 {
+    letter-spacing: -2px;
+    font-size: 26px;
+}
+
 #topleft {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    width: 60%;
 }
 
 .footer_section {
@@ -28,7 +42,11 @@ h1 {
     padding-left: 15px;
 }
 
-#topleft h1,
+#bottomleft h2 {
+    color: white;
+    letter-spacing: -3px;
+}
+
 #topright h1,
 #bottomleft h1,
 #bottomright h1,
@@ -41,6 +59,25 @@ h1 {
     width: 98%;
     height: auto;
     margin-top: 1%;
+}
+
+#topleft h1 {
+    background-color: rgba(0, 117, 130, 0.85);
+    border-radius: 16px;
+    box-shadow: 2px 2px #003940;
+    width: 98%;
+    height: 10px;
+    margin-top: 1%;
+}
+
+#bottomleft h1 {
+    background-color: rgba(0, 117, 130, 0.85);
+    border-radius: 16px;
+    box-shadow: 2px 2px #003940;
+    width: 98%;
+    height: auto;
+    margin-top: 1%;
+    line-height: 30px;
 }
 
 #header h1 {
@@ -63,7 +100,6 @@ h1 {
 
 a {
     color: white;
-    font-style: italic;
 }
 
 body {
@@ -137,7 +173,8 @@ footer {
 
 #topleft h3 {
     text-shadow: 2px 2px #00028270;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    line-height: 18px;
 }
 
 h3 {
@@ -338,8 +375,6 @@ footer {
     #chart1,
     #chart2,
     #chart3 {
-        width: 90%;
-        height: 90%;
         display: block;
         align-self: center;
     }
