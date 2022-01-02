@@ -105,7 +105,7 @@ h1 {
 }
 
 a {
-    color: #D1DEDC;
+    color: white;
     font-style: italic;
 }
 
@@ -175,7 +175,7 @@ body {
 }
 
 #topleft h4 {
-    color: #D1DEDC;
+    color: white;
     text-shadow: 2px 2px #00028270;
     letter-spacing: 1px;
     line-height: 16px;
@@ -217,20 +217,20 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 110%;
+    width: 100%;
 }
 
 .rows h1,
 .rows h3 {
     text-shadow: 2px 2px #00028270;
     margin: .75%;
-    color: #D1DEDC
+    color: white
 }
 
 .rows h2 {
     text-shadow: 2px 2px #00028270;
     margin: .75%;
-    color: #D1DEDC;
+    color: white;
     font-size: 18px;
 }
 
@@ -267,7 +267,7 @@ h3 {
     font-size: 20px;
     letter-spacing: -1px;
     background-color: #007582bf;
-    color: #D1DEDC;
+    color: white;
     border-radius: 15px;
 }
 
@@ -280,7 +280,7 @@ footer {
     letter-spacing: -1px;
     background-color: rgba(3, 43, 48, 0.85);
     text-shadow: 2px 2px #00028270;
-    color: #D1DEDC;
+    color: white;
     border-radius: 6px;
     margin-top: .5%;
 }
@@ -356,10 +356,10 @@ footer {
     h1 {
         font-size: -2px;
         letter-spacing: -2px;
-        color: #D1DEDC;
+        color: white;
     }
     h3 {
-        color: #D1DEDC;
+        color: white;
         letter-spacing: -1px;
     }
     #topleft,
@@ -424,7 +424,7 @@ footer {
 }
 
 body {
-    background-color: #D1DEDC;
+    background-color: white;
     font-family: 'Lucida Sans Regular', 'Tahoma', 'Helvetica'
 }
 
@@ -438,9 +438,18 @@ footer h2 {
     font-size: 22px;
 }
 
+footer h3 {
+    text-align: left;
+    font-size: 18px;
+}
+
 footer a {
     text-align: left;
     line-height: 150%;
     width: 100%;
     margin-left: 0px;
+}
+
+#closer {
+    margin-top: .5%;
 }
