@@ -1,8 +1,7 @@
-
 function chart1(data1, data2, data3) {
     var cont1 = document.getElementById("chart1");
     var chart1 = new CanvasJS.Chart(cont1, {
-        backgroundColor: "rgb(0, 71, 79, 0.35)",
+        backgroundColor: "rgba(1, 39, 43, 0.45)",
         animationEnabled: true,
         axisX: {
             labelFontColor: "rgba(0, 0, 0, 0.001)",
@@ -11,9 +10,9 @@ function chart1(data1, data2, data3) {
             tickLength: 0,
             lineColor: "white",
             tickLength: 0,
-            labelFormatter: function(){
+            labelFormatter: function() {
                 return " ";
-              }
+            }
         },
         axisY: {
             maximum: 500,
@@ -33,8 +32,8 @@ function chart1(data1, data2, data3) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, 
-            animationEnabled: false, 
+            enabled: true,
+            animationEnabled: false,
             shared: true
         },
         data: [{
@@ -44,18 +43,18 @@ function chart1(data1, data2, data3) {
             legendMarkerType: "",
             type: "area",
             color: "#FA6F50",
-            markerSize: 6,
+            markerSize: 8,
             dataPoints: data1
-        },{
+        }, {
             name: "Out of Area Tuition",
             showInLegend: true,
             toolTipContent: 'Out of Area: ${y}',
             legendMarkerType: "square",
             type: "line",
-            color: "#993426",
+            color: "#bd1f00",
             markerSize: 8,
             dataPoints: data2
-        },{
+        }, {
             name: "Out of State Tuition",
             showInLegend: true,
             toolTipContent: 'Out of State: ${y}',
@@ -64,7 +63,7 @@ function chart1(data1, data2, data3) {
             color: "#22D6E6",
             markerSize: 8,
             dataPoints: data3
-        },]
+        }, ]
     });
     return chart1.render()
 };
@@ -73,7 +72,7 @@ function chart2(data, data2, data3) {
     var cont2 = document.getElementById("chart2");
 
     var chart2 = new CanvasJS.Chart(cont2, {
-        backgroundColor: "rgb(0, 71, 79, 0.35)",
+        backgroundColor: "rgba(1, 39, 43, 0.45)",
         animationEnabled: true,
         axisX: {
             labelFontColor: "rgba(0, 0, 0, 0.001)",
@@ -102,12 +101,11 @@ function chart2(data, data2, data3) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, 
-            animationEnabled: true, 
+            enabled: true,
+            animationEnabled: true,
             shared: true
         },
-        data: [
-            {
+        data: [{
                 name: "1yr Change",
                 showInLegend: true,
                 toolTipContent: 'School: {label}<br>1yr Change: {y}%',
@@ -116,13 +114,13 @@ function chart2(data, data2, data3) {
                 color: "#22D6E6",
                 markerSize: 8,
                 dataPoints: data3
-            },{
+            }, {
                 name: "5yr Change",
                 showInLegend: true,
                 toolTipContent: '5yr Change: {y}%',
                 legendMarkerType: "square",
                 type: "line",
-                color: "#993426",
+                color: "#bd1f00",
                 markerSize: 8,
                 dataPoints: data
             },
@@ -145,7 +143,7 @@ function chart2(data, data2, data3) {
 function chart3(data1, data2, data3, data4, data5, data6) {
     var cont3 = document.getElementById("chart3");
     var chart3 = new CanvasJS.Chart(cont3, {
-        backgroundColor: "rgb(0, 71, 79, 0.35)",
+        backgroundColor: "rgba(1, 39, 43, 0.45)",
         animationEnabled: true,
         axisX: {
             labelFontColor: "rgba(0, 0, 0, 0.001)",
@@ -175,8 +173,8 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             fontColor: "white"
         },
         toolTip: {
-            enabled: true, 
-            animationEnabled: true, 
+            enabled: true,
+            animationEnabled: true,
             shared: true
         },
         data: [{
@@ -226,20 +224,21 @@ function chart3(data1, data2, data3, data4, data5, data6) {
 };
 
 function mapper() {
-    var mymap = L.map('mapid').setView([39.10009657780947, -77.157878462514], 7);
+    var mymap = L.map('mapid').setView([39.10009657780947, -77.157878462514], 8);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
-    }).addTo(mymap); var circle = L.circle([39.53183213962793, -76.99109095421696], 6000, {
+    }).addTo(mymap);
+    var circle = L.circle([39.53183213962793, -76.99109095421696], 6000, {
         color: '#3B47DB',
         fillColor: '#3B47DB',
         fillOpacity: 0.5
     }).addTo(mymap).bindPopup("<b><a href='https://www.allegany.edu/'>Allegany College of Maryland</a></b><br><b>Student Body:</b> 2,584<br><b>Tuition & Fees:</b>  $164.80<br><br><b>GI Bill Student%:</b>  1.8%<br><b>Vaccine Req: </b>Required for Housing<br>No for Commuters");
     var circle = L.circle([39.05002999594673, -76.51384918500835], 6000, {
-        color: '#993426',
-        fillColor: '#993426',
+        color: '#bd1f00',
+        fillColor: '#bd1f00',
         fillOpacity: 0.5,
         radius: 50
     }).addTo(mymap).bindPopup("<b><a href='https://www.aacc.edu/'>Anne Arundel Community College</a></b><br><b>Student Body:</b> 12,655<br>(#3 in Size amongst MD CC's & #8 All of MD)<br><b>Tuition & Fees:</b>  $147<br><b>Students 25 and Older:</b>  #5<br><b>GI Bill Student%:</b>  5.6%<br>(#2 in Maryland CC's)<br><b>Vaccine Req: </b>Required");
@@ -258,7 +257,7 @@ function mapper() {
         fillColor: '#3B47DB',
         fillOpacity: 0.5
     }).addTo(mymap).bindPopup("<b><a href='http://cecil.edu/'>Cecil College</a></b><br><b>Student Body:</b> 2,377<br><b>Tuition & Fees:</b>  $159<br><b>Students 25 and Older:</b>  #9<br><b>GI Bill Student%:</b>  3.6%<br>(#5 in Maryland CC's)<br><b>Vaccine Req: </b>Not required");
-    
+
     var circle = L.circle([38.95275598286228, -76.08110479258522], 6000, {
         color: '#3B47DB',
         fillColor: '#3B47DB',
@@ -320,7 +319,7 @@ function mapper() {
 
 
 window.addEventListener("load", () => {
-    
+
     var _5yr = [{
             label: 'Chesapeake College',
             y: -8.9
@@ -545,113 +544,116 @@ window.addEventListener("load", () => {
         { label: 'Community College of Baltimore County', y: 82617.5 }
     ];
     var _1yr = [{
-        label: 'Chesapeake College',
-        y: .1
-    }, {
-        label: 'College of Southern Maryland',
-        y: .1
-    }, {
-        label: 'Baltimore City Community College',
-        y: 1.9
-    }, {
-        label: "Prince George's Community College",
-        y: -.8
-    }, {
-        label: 'Cecil College',
-        y: .3
-    }, {
-        label: 'Hagerstown Community College',
-        y: -2.4
-    }, {
-        label: 'Garrett College',
-        y: 6.8
-    }, {
-        label: 'Wor-Wic Community College',
-        y: 3.7
-    }, {
-        label: 'Frederick Community College',
-        y: 2.4
-    }, {
-        label: 'Montgomery College',
-        y: 0
-    }, {
-        label: 'Anne Arundel Community College',
-        y: 3.2
-    }, {
-        label: 'Howard Community College',
-        y: 3.1
-    }, {
-        label: 'Harford Community College',
-        y: 0
-    }, {
-        label: 'Allegany College of Maryland',
-        y: 2.9
-    }, {
-        label: 'Community College of Baltimore County',
-        y: 3.9
-    }, {
-        label: 'Carroll Community College',
-        y: .4
-    },
+            label: 'Chesapeake College',
+            y: .1
+        }, {
+            label: 'College of Southern Maryland',
+            y: .1
+        }, {
+            label: 'Baltimore City Community College',
+            y: 1.9
+        }, {
+            label: "Prince George's Community College",
+            y: -.8
+        }, {
+            label: 'Cecil College',
+            y: .3
+        }, {
+            label: 'Hagerstown Community College',
+            y: -2.4
+        }, {
+            label: 'Garrett College',
+            y: 6.8
+        }, {
+            label: 'Wor-Wic Community College',
+            y: 3.7
+        }, {
+            label: 'Frederick Community College',
+            y: 2.4
+        }, {
+            label: 'Montgomery College',
+            y: 0
+        }, {
+            label: 'Anne Arundel Community College',
+            y: 3.2
+        }, {
+            label: 'Howard Community College',
+            y: 3.1
+        }, {
+            label: 'Harford Community College',
+            y: 0
+        }, {
+            label: 'Allegany College of Maryland',
+            y: 2.9
+        }, {
+            label: 'Community College of Baltimore County',
+            y: 3.9
+        }, {
+            label: 'Carroll Community College',
+            y: .4
+        },
 
 
-];
-var res = [{label:'Wor-Wic Community College ',y:133.6},
-{label:'Hagerstown Community College ',y:136.4},
-{label:'Baltimore City Community College ',y:137.4},
-{label:'Anne Arundel Community College ',y:140},
-{label:'Garrett College ',y:142.6},
-{label:'Allegany College of Maryland ',y:144.8},
-{label:'Frederick Community College ',y:149.2},
-{label:'Harford Community College ',y:152.6},
-{label:'Prince George’s Community College ',y:155.4},
-{label:'Cecil College ',y:156},
-{label:'Chesapeake College ',y:157.6},
-{label:'College of Southern Maryland ',y:157.8},
-{label:'Howard Community College ',y:163.6},
-{label:'Community College of Baltimore County ',y:163.8},
-{label:'Carroll Community College ',y:164.8},
-{label:'Montgomery College ',y:171.2},
-];
-var oos = [
-    {label:'Wor-Wic Community College',y:319.6},
-    {label:'Hagerstown Community College',y:264.6},
-    {label:'Baltimore City Community College',y:308.2},
-    {label:'Anne Arundel Community College',y:411.8,
-    indexLabel: "AACC",
-    indexLabelFontColor: "white"},
-    {label:'Garrett College',y:332.8},
-    {label:'Allegany College of Maryland',y:313.8},
-    {label:'Frederick Community College',y:389.6},
-    {label:'Harford Community College',y:334},
-    {label:'Prince George’s Community College',y:350},
-    {label:'Cecil College',y:309.6},
-    {label:'Chesapeake College',y:320.6},
-    {label:'College of Southern Maryland',y:375.6},
-    {label:'Howard Community College',y:301.2},
-    {label:'Community College of Baltimore County',y:372.8},
-{label:'Carroll Community College',y:313},
-{label:'Montgomery College',y:451.2},
-];
-var ooa = [
-    {label:'Wor-Wic Community College',y:260.4},
-    {label:'Hagerstown Community College',y:204.2},
-    {label:'Baltimore City Community College',y:137.4},
-    {label:'Anne Arundel Community College',y:249},
-    {label:'Garrett College',y:282.8},
-    {label:'Allegany College of Maryland',y:258},
-    {label:'Frederick Community College',y:294.4},
-    {label:'Harford Community College',y:243.6},
-    {label:'Prince George’s Community College',y:249},
-    {label:'Cecil College',y:245.8},
-    {label:'Chesapeake College',y:236.6},
-    {label:'College of Southern Maryland',y:276.4},
-    {label:'Howard Community College',y:252.6},
-    {label:'Community College of Baltimore County',y:267},
-{label:'Carroll Community College',y:246.6},
-{label:'Montgomery College',y:330.6},
+    ];
+    var res = [{ label: 'Wor-Wic Community College ', y: 133.6 },
+        { label: 'Hagerstown Community College ', y: 136.4 },
+        { label: 'Baltimore City Community College ', y: 137.4 },
+        { label: 'Anne Arundel Community College ', y: 140 },
+        { label: 'Garrett College ', y: 142.6 },
+        { label: 'Allegany College of Maryland ', y: 144.8 },
+        { label: 'Frederick Community College ', y: 149.2 },
+        { label: 'Harford Community College ', y: 152.6 },
+        { label: 'Prince George’s Community College ', y: 155.4 },
+        { label: 'Cecil College ', y: 156 },
+        { label: 'Chesapeake College ', y: 157.6 },
+        { label: 'College of Southern Maryland ', y: 157.8 },
+        { label: 'Howard Community College ', y: 163.6 },
+        { label: 'Community College of Baltimore County ', y: 163.8 },
+        { label: 'Carroll Community College ', y: 164.8 },
+        { label: 'Montgomery College ', y: 171.2 },
+    ];
+    var oos = [
+        { label: 'Wor-Wic Community College', y: 319.6 },
+        { label: 'Hagerstown Community College', y: 264.6 },
+        { label: 'Baltimore City Community College', y: 308.2 },
+        {
+            label: 'Anne Arundel Community College',
+            y: 411.8,
+            indexLabel: "AACC",
+            indexLabelFontColor: "white"
+        },
+        { label: 'Garrett College', y: 332.8 },
+        { label: 'Allegany College of Maryland', y: 313.8 },
+        { label: 'Frederick Community College', y: 389.6 },
+        { label: 'Harford Community College', y: 334 },
+        { label: 'Prince George’s Community College', y: 350 },
+        { label: 'Cecil College', y: 309.6 },
+        { label: 'Chesapeake College', y: 320.6 },
+        { label: 'College of Southern Maryland', y: 375.6 },
+        { label: 'Howard Community College', y: 301.2 },
+        { label: 'Community College of Baltimore County', y: 372.8 },
+        { label: 'Carroll Community College', y: 313 },
+        { label: 'Montgomery College', y: 451.2 },
+    ];
+    var ooa = [
+        { label: 'Wor-Wic Community College', y: 260.4 },
+        { label: 'Hagerstown Community College', y: 204.2 },
+        { label: 'Baltimore City Community College', y: 137.4 },
+        { label: 'Anne Arundel Community College', y: 249 },
+        { label: 'Garrett College', y: 282.8 },
+        { label: 'Allegany College of Maryland', y: 258 },
+        { label: 'Frederick Community College', y: 294.4 },
+        { label: 'Harford Community College', y: 243.6 },
+        { label: 'Prince George’s Community College', y: 249 },
+        { label: 'Cecil College', y: 245.8 },
+        { label: 'Chesapeake College', y: 236.6 },
+        { label: 'College of Southern Maryland', y: 276.4 },
+        { label: 'Howard Community College', y: 252.6 },
+        { label: 'Community College of Baltimore County', y: 267 },
+        { label: 'Carroll Community College', y: 246.6 },
+        { label: 'Montgomery College', y: 330.6 },
 
-];
+    ];
     chart1(res, ooa, oos);
     chart2(_5yr, zero, _1yr);
     chart3(sal1, prof, ascprof, astprof, inst, calc_avg);

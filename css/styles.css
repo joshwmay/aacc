@@ -39,10 +39,12 @@ h1 {
     width: 99%;
     height: auto;
     margin-top: 1%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 #header {
-    background-color: rgba(0, 117, 130, 0.85);
+    background-color: rgba(1, 39, 43, 0.65);
     box-shadow: 2px 2px #003940;
     width: 99%;
     height: auto;
@@ -79,7 +81,7 @@ h1 {
 
 #closer h1 {
     white-space: nowrap;
-    letter-spacing: -5px;
+    letter-spacing: 0px;
 }
 
 #topleft h1 {
@@ -157,8 +159,17 @@ body {
 #closer p {
     margin-top: 10px;
     font-size: 22px;
+    letter-spacing: -1.5px;
     padding-bottom: 1%;
     text-align: justify;
+}
+
+#topleft h4 {
+    color: #D1DEDC;
+    text-shadow: 2px 2px #00028270;
+    letter-spacing: 1px;
+    line-height: 16px;
+    font-size: 14px;
 }
 
 #mainbreaker,
@@ -225,7 +236,7 @@ h3 {
 #bigchart {
     display: flex;
     height: 325px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 .breaker {
@@ -254,7 +265,7 @@ footer {
     align-items: center;
     width: 100%;
     letter-spacing: -1px;
-    background-color: #003940b4;
+    background-color: rgba(3, 43, 48, 0.85);
     text-shadow: 2px 2px #00028270;
     color: #D1DEDC;
     border-radius: 6px;
@@ -404,7 +415,7 @@ footer {
 
 body {
     background-color: #D1DEDC;
-    font-family: 'Lucida Sans Regular', 'Geneva', 'Verdana'
+    font-family: 'Lucida Sans Regular', 'Tahoma', 'Helvetica'
 }
 
 footer h2 {
@@ -415,13 +426,11 @@ footer h2 {
     padding-left: 1%;
     margin-left: 1%;
     font-size: 22px;
-    background-color: #003940b4;
 }
 
 footer a {
     text-align: left;
     line-height: 150%;
     width: 100%;
-    background-color: #003940b4;
     margin-left: 0px;
 }
