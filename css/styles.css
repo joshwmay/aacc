@@ -243,12 +243,14 @@ h3 {
     width: 3%;
 }
 
-#bigchart {
+#bigchart #mapid{
     display: flex;
     height: 325px;
     margin-bottom: 10px;
     justify-self: center;
     align-self: center;
+    text-shadow: none;
+
 }
 
 .breaker {
