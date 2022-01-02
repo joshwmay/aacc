@@ -36,6 +36,10 @@ h1 {
     height: auto;
     margin-top: -10px;
 }
+#bigchart h3 {
+    margin-top: -7.5px;
+    margin-bottom: 0px
+}
 #header h1 {
     margin-top: 0px;
     line-height: 65px;
@@ -53,7 +57,7 @@ h1 {
     align-items: center;
     white-space: nowrap;
     letter-spacing: -3.25px;
-    height: 25%;
+    height: 18%;
     border-radius: 8px;
 }
 
@@ -69,12 +73,20 @@ body {
     align-items: center;
 }
 
+#shorter {
+    height: 350px;
+}
+
+#taller {
+    height: 450px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(0, 71, 79, 0.35);
-    width: 95%;
+    width: 98%;
     height: 95%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -178,7 +190,7 @@ h3 {
 
 #bigchart {
     display: flex;
-    height: 500px;
+    height: 375px;
     margin-bottom: 10px
 }
 
