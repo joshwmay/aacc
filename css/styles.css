@@ -11,6 +11,16 @@ h1 {
     letter-spacing: -2px;
 }
 
+#bottomright h3 {
+    letter-spacing: -3px;
+    white-space: nowrap;
+}
+
+#topright h2 {
+    white-space: nowrap;
+    letter-spacing: -2px;
+}
+
 #topleft {
     display: flex;
     justify-content: center;
@@ -214,7 +224,7 @@ h3 {
 
 #bigchart {
     display: flex;
-    height: 375px;
+    height: 325px;
     margin-bottom: 10px
 }
 
