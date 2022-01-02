@@ -261,7 +261,7 @@ function mapper() {
         color: '#3B47DB',
         fillColor: '#3B47DB',
         fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("<b><a href='http://www.ccbcmd.edu/'>Community College of Baltimore County</a></b><br><b>Student Body:</b> 17,732<br>(#2 in Size amongst MD & CC's #6 All of MD)<br><b>$ Per Credit Hour:</b>  $372.80<br><b>Students 25 and Older:</b>  #2<br><b>GI Bill Student%:</b>  .8%<br><b>Vaccine Req: </b><i>'No, Only required for some health professions students'");
+    }).addTo(mymap).bindPopup("<b><a href='http://www.ccbcmd.edu/'>Community College of Baltimore County</a></b><br><b>Student Body:</b> 17,732<br>(#2 in Size amongst MD & CC's #6 All of MD)<br><b>$ Per Credit Hour:</b>  $372.80<br><b>Students 25 and Older:</b>  #2<br><b>GI Bill Student%:</b>  .8%<br><b>Vaccine Req: </b><i>'Not required, Except for some health professions students'");
     var circle = L.circle([39.451979960641104, -77.4184624490804], 6000, {
         color: '#3B47DB',
         fillColor: '#3B47DB',
