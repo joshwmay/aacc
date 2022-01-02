@@ -22,10 +22,16 @@ h1 {
 #bottomright h1,
 #bigchart h1,
 #closer h1,
-#header,
 .title {
     background-color: rgba(0, 117, 130, 0.85);
     border-radius: 10px;
+    box-shadow: 2px 2px #003940;
+    width: 99%;
+    height: auto;
+    margin-top: 1%;
+}
+#header {
+    background-color: rgba(0, 117, 130, 0.85);
     box-shadow: 2px 2px #003940;
     width: 99%;
     height: auto;
