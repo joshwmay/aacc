@@ -39,8 +39,8 @@ h1 {
     width: 99%;
     height: auto;
     margin-top: 1%;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .25px;
+    -webkit-text-stroke-color: rgba(130, 61, 0,0.35);
 }
 
 #header {
@@ -260,7 +260,7 @@ h3 {
 
 footer {
     display: flex;
-    height: 2%;
+    height: 70px;
     align-content: center;
     align-items: center;
     width: 100%;
@@ -420,7 +420,7 @@ body {
 
 footer h2 {
     word-wrap: break-word;
-    width: 25%;
+    width: 10%;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 1%;
