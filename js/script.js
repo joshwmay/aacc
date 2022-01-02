@@ -9,13 +9,18 @@ function chart1(data1, data2, data3) {
             gridThickness: 0,
             tickLength: 0,
             lineColor: "white",
+            tickLength: 0,
+            labelFormatter: function(){
+                return " ";
+              }
         },
         axisY: {
             maximum: 500,
             minimum: 0,
-            interval: 100,
+            interval: 250,
             gridThickness: 0,
-            tickLength: 1,
+            tickLength: 0,
+            lineThickness: 0,
             prefix: "$",
             lineColor: "white",
             labelFontColor: "white",
@@ -72,9 +77,10 @@ function chart2(data, data2, data3) {
         axisX: {
             labelFontColor: "rgba(0, 0, 0, 0.001)",
             interval: 1,
+            lineColor: "white",
             gridThickness: 0,
             tickLength: 0,
-            lineColor: "white",
+            lineThickness: 0,
         },
         axisY: {
             maximum: 40,
@@ -99,16 +105,17 @@ function chart2(data, data2, data3) {
             animationEnabled: true, 
             shared: true
         },
-        data: [{
-            name: "1yr Change",
-            showInLegend: true,
-            toolTipContent: 'School: {label}<br>1yr Change: {y}%',
-            legendMarkerType: "square",
-            type: "line",
-            color: "#22D6E6",
-            markerSize: 8,
-            dataPoints: data3
-        },{
+        data: [
+            {
+                name: "1yr Change",
+                showInLegend: true,
+                toolTipContent: 'School: {label}<br>1yr Change: {y}%',
+                legendMarkerType: "square",
+                type: "area",
+                color: "#22D6E6",
+                markerSize: 8,
+                dataPoints: data3
+            },{
                 name: "5yr Change",
                 showInLegend: true,
                 toolTipContent: '5yr Change: {y}%',
@@ -136,15 +143,14 @@ function chart2(data, data2, data3) {
 
 function chart3(data1, data2, data3, data4, data5, data6) {
     var cont3 = document.getElementById("chart3");
-
     var chart3 = new CanvasJS.Chart(cont3, {
         backgroundColor: "rgb(0, 71, 79, 0.35)",
         animationEnabled: true,
         axisX: {
             labelFontColor: "rgba(0, 0, 0, 0.001)",
-            interval: 1,
             gridThickness: 0,
             tickLength: 0,
+            lineThickness: 0,
             lineColor: "white",
         },
         axisY: {
@@ -153,12 +159,12 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             interval: 25000,
             includeZero: false,
             gridThickness: 0,
-            tickLength: 1,
+            tickLength: 0,
+            lineThickness: 0,
             prefix: "",
             suffix: "",
             valueFormatString: "$0.",
             includeZero: true,
-            lineColor: "white",
             labelFontColor: "white",
         },
         legend: {
@@ -176,19 +182,19 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 name: "Avg Professor Salary",
                 showInLegend: true,
                 toolTipContent: 'School: {label}<br>Avg Professor Salary: ${y}',
-                legendMarkerType: "square",
+                legendMarkerType: "circle",
                 type: "area",
                 color: "blue",
-                markerSize: 4,
+                markerSize: 7,
                 dataPoints: data2
             },
             {
                 name: "Assoc Professor Salary",
                 showInLegend: true,
                 toolTipContent: 'Assoc Professor Salary: ${y}',
-                legendMarkerType: "square",
+                legendMarkerType: "triangle",
                 type: "area",
-                color: "green",
+                color: "#01D17C",
                 markerSize: 4,
                 dataPoints: data3
             },
@@ -206,7 +212,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 name: "Instructor Salary",
                 showInLegend: true,
                 toolTipContent: 'Instructor Salary: ${y}',
-                legendMarkerType: "square",
+                legendMarkerType: "triangle",
                 type: "column",
                 color: "#ad931d",
                 markerSize: 4,
