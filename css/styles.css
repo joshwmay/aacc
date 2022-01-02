@@ -30,6 +30,7 @@ h1 {
     height: auto;
     margin-top: 1%;
 }
+
 #header {
     background-color: rgba(0, 117, 130, 0.85);
     box-shadow: 2px 2px #003940;
@@ -37,18 +38,28 @@ h1 {
     height: auto;
     margin-top: 1%;
 }
+
 #bottomleft h3 {
     background-color: rgba(0, 117, 130, 0.85);
     height: auto;
     margin-top: -10px;
 }
+
 #bigchart h3 {
     margin-top: -7.5px;
     margin-bottom: 0px
 }
+
 #header h1 {
     margin-top: 0px;
     line-height: 65px;
+    white-space: nowrap;
+    letter-spacing: -3px;
+}
+
+#header h2 {
+    white-space: nowrap;
+    letter-spacing: -2px;
 }
 
 #closer h1,
@@ -56,13 +67,17 @@ h1 {
     margin-bottom: -1px
 }
 
+#closer h1 {
+    white-space: nowrap;
+    letter-spacing: -5px;
+}
+
 #topleft h1 {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
-    letter-spacing: -3.25px;
+    letter-spacing: -2px;
     height: 18%;
     border-radius: 8px;
 }
@@ -111,11 +126,13 @@ body {
     justify-content: center;
     align-items: space-evenly;
 }
+
 #mainbreaker {
     width: 102%;
     margin-top: -8px;
     border-radius: 0px;
 }
+
 #mainbreaker h1 {
     font-size: 42px;
     margin-bottom: 2px;
@@ -129,7 +146,7 @@ body {
 #mainbreaker p,
 #closer p {
     margin-top: 10px;
-    font-size: 26px;
+    font-size: 22px;
     padding-bottom: 1%;
     text-align: justify;
 }
@@ -185,6 +202,7 @@ h3 {
     color: #D1DEDC;
     font-size: 18px;
 }
+
 .rows.column {
     margin-left: .5%;
     margin-right: .5%
@@ -226,12 +244,13 @@ footer {
     align-items: center;
     width: 100%;
     letter-spacing: -1px;
-    background-color: #007582bf;
+    background-color: #003940b4;
     text-shadow: 2px 2px #00028270;
     color: #D1DEDC;
     border-radius: 6px;
     margin-top: .5%;
 }
+
 .breaker p {
     margin-left: 2%;
     margin-right: 2%;
@@ -290,7 +309,7 @@ footer {
         height: 95%;
         display: block;
         align-self: center;
-        overflow: hidden
+        overflow: hidden;
     }
     #mapid {
         width: 100%;
@@ -388,7 +407,6 @@ footer h2 {
     font-size: 22px;
     background-color: #003940b4;
 }
-
 
 footer a {
     text-align: left;
