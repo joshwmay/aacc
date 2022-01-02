@@ -8,6 +8,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="/media/admin/style-assets/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
@@ -66,16 +67,21 @@
         <div class="rows">
 
             <div class="column" id="bottomleft" title="Line chart of schools by average tuition price change % 2017 - 2021">
-                <h1>Tuition & Fees<br>Per Credit Hour
-                </h1>
+                <div class="title">
+                    <h1>Tuition & Fees
+                    </h1>
+                    <h3>Per Credit Hour</h3>
+                </div>
                 <div id="chart2" class="stage"></div>
                 <h2><i>*Full-Time/Residential Students</i></h2>
+                
             </div>
             <div class="divider"></div>
             <div id="bottomright">
                 <div class="section" title="Map of Maryland Community Colleges including details about the student body" id="map">
                     <h1>Md Community Colleges</h1>
                     <div class="stage" id="mapid"></div>
+                    <h3><i>*Tuition prices based on FY21 Resident rates</i></h3>
                 </div>
             </div>
         </div>
@@ -97,7 +103,7 @@
         </div>
         </div>
     </div>
-
+    <div id="box"></div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
