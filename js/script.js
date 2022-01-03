@@ -180,7 +180,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
         data: [{
                 name: "Professor",
                 showInLegend: true,
-                toolTipContent: 'School: {label}<br>Avg Professor Salary: ${y}',
+                toolTipContent: 'School: {label}<br>Professor: ${y}',
                 legendMarkerType: "circle",
                 type: "area",
                 color: "blue",
@@ -190,7 +190,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             {
                 name: "Associte Prof",
                 showInLegend: true,
-                toolTipContent: 'Assoc Professor Salary: ${y}',
+                toolTipContent: 'Assoc Prof: ${y}',
                 legendMarkerType: "triangle",
                 type: "area",
                 color: "#01D17C",
@@ -200,7 +200,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             {
                 name: "Assistant Prof",
                 showInLegend: true,
-                toolTipContent: 'Asst Professor Salary: ${y}',
+                toolTipContent: 'Asst Prof: ${y}',
                 legendMarkerType: "square",
                 type: "area",
                 color: "purple",
@@ -210,7 +210,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             {
                 name: "Instructor",
                 showInLegend: true,
-                toolTipContent: 'Instructor Salary: ${y}',
+                toolTipContent: 'Instructor: ${y}',
                 legendMarkerType: "triangle",
                 type: "column",
                 color: "#ad931d",

@@ -106,6 +106,9 @@ h1 {
 #closer h1 {
     white-space: nowrap;
     letter-spacing: 0px;
+    font-size: 22px;
+    margin: -5px;
+    line-height: 25px;
 }
 
 #topleft h1 {
@@ -119,7 +122,7 @@ h1 {
 }
 
 a {
-    color: white;
+    color: #F2F9FC;
     font-style: italic;
 }
 
@@ -189,7 +192,7 @@ body {
 }
 
 #topleft h4 {
-    color: white;
+    color: #F2F9FC;
     text-shadow: 2px 2px #00028270;
     letter-spacing: 1px;
     line-height: 16px;
@@ -238,13 +241,13 @@ h3 {
 .rows h3 {
     text-shadow: 2px 2px #00028270;
     margin: .75%;
-    color: white
+    color: #F2F9FC
 }
 
 .rows h2 {
     text-shadow: 2px 2px #00028270;
     margin: .75%;
-    color: white;
+    color: #F2F9FC;
     font-size: 18px;
 }
 
@@ -281,7 +284,7 @@ h3 {
     font-size: 20px;
     letter-spacing: -1px;
     background-color: #007582bf;
-    color: white;
+    color: #F2F9FC;
     border-radius: 15px;
 }
 
@@ -294,7 +297,7 @@ footer {
     letter-spacing: -1px;
     background-color: rgba(3, 43, 48, 0.85);
     text-shadow: 2px 2px #00028270;
-    color: white;
+    color: #F2F9FC;
     border-radius: 6px;
     margin-top: .5%;
 }
@@ -370,10 +373,10 @@ footer {
     h1 {
         font-size: -2px;
         letter-spacing: -2px;
-        color: white;
+        color: #F2F9FC;
     }
     h3 {
-        color: white;
+        color: #F2F9FC;
         letter-spacing: -1px;
     }
     #topleft,
@@ -438,7 +441,7 @@ footer {
 }
 
 body {
-    background-color: white;
+    background-color: #F2F9FC;
     font-family: 'Lucida Sans Regular', 'Tahoma', 'Helvetica'
 }
 
@@ -465,5 +468,5 @@ footer a {
 }
 
 #closer {
-    margin-top: .5%;
+    margin-top: 1%;
 }
