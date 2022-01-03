@@ -11,10 +11,6 @@ h1 {
     letter-spacing: -2px;
 }
 
-#bottomright h3 {
-    letter-spacing: -3px;
-    white-space: nowrap;
-}
 
 #topright h2 {
     white-space: nowrap;
@@ -28,9 +24,6 @@ h1 {
 }
 
 #topleft h1,
-#topright h1,
-#bottomright h1,
-#map h1,
 #closer h1,
 .title {
     background-color: rgba(0, 117, 130, 0.85);
@@ -41,6 +34,27 @@ h1 {
     margin-top: 1%;
     -webkit-text-stroke-width: .25px;
     -webkit-text-stroke-color: rgba(130, 61, 0,0.35);
+}
+
+
+
+#topright h1, 
+#bottomright h1,
+#map h1 {
+    background-color: none;
+    border-radius: 10px;
+    width: 99%;
+    height: auto;
+    margin-top: 1%;
+    -webkit-text-stroke-width: .25px;
+    -webkit-text-stroke-color: rgba(130, 61, 0,0.35);
+}
+#map h3 {
+    background-color: none;
+    border-radius: 10px;
+    width: 99%;
+    height: auto;
+    margin-top: -4px;
 }
 
 #bigchart h1 {
@@ -63,7 +77,7 @@ h1 {
 }
 
 #bottomleft h3 {
-    background-color: rgba(0, 117, 130, 0.85);
+    background-color: none;
     height: auto;
     margin-top: -10px;
 }

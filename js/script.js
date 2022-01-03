@@ -37,7 +37,7 @@ function chart1(data1, data2, data3) {
             shared: true
         },
         data: [{
-            name: "Residential Tuition",
+            name: "Residential",
             showInLegend: true,
             toolTipContent: 'School: {label} <br>Resident: ${y}',
             legendMarkerType: "",
@@ -46,7 +46,7 @@ function chart1(data1, data2, data3) {
             markerSize: 8,
             dataPoints: data1
         }, {
-            name: "Out of Area Tuition",
+            name: "Out of Area",
             showInLegend: true,
             toolTipContent: 'Out of Area: ${y}',
             legendMarkerType: "square",
@@ -55,11 +55,11 @@ function chart1(data1, data2, data3) {
             markerSize: 8,
             dataPoints: data2
         }, {
-            name: "Out of State Tuition",
+            name: "Out of State",
             showInLegend: true,
             toolTipContent: 'Out of State: ${y}',
             legendMarkerType: "square",
-            type: "scatter",
+            type: "line",
             color: "#22D6E6",
             markerSize: 8,
             dataPoints: data3
@@ -178,7 +178,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
             shared: true
         },
         data: [{
-                name: "Avg Professor Salary",
+                name: "Professor",
                 showInLegend: true,
                 toolTipContent: 'School: {label}<br>Avg Professor Salary: ${y}',
                 legendMarkerType: "circle",
@@ -188,7 +188,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 dataPoints: data2
             },
             {
-                name: "Assoc Professor Salary",
+                name: "Associte Prof",
                 showInLegend: true,
                 toolTipContent: 'Assoc Professor Salary: ${y}',
                 legendMarkerType: "triangle",
@@ -198,7 +198,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 dataPoints: data3
             },
             {
-                name: "Asst Professor Salary",
+                name: "Assistant Prof",
                 showInLegend: true,
                 toolTipContent: 'Asst Professor Salary: ${y}',
                 legendMarkerType: "square",
@@ -208,7 +208,7 @@ function chart3(data1, data2, data3, data4, data5, data6) {
                 dataPoints: data4
             },
             {
-                name: "Instructor Salary",
+                name: "Instructor",
                 showInLegend: true,
                 toolTipContent: 'Instructor Salary: ${y}',
                 legendMarkerType: "triangle",
