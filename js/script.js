@@ -658,5 +658,4 @@ window.addEventListener("load", () => {
     chart2(_5yr, zero, _1yr);
     chart3(sal1, prof, ascprof, astprof, inst, calc_avg);
     mapper();
-    pyr();
 })
