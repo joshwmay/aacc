@@ -14,7 +14,7 @@ h1 {
 
 #topright h2 {
     white-space: nowrap;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
 }
 
 #topleft {
@@ -345,12 +345,6 @@ footer {
     .canvasjs-chart-canvas {
         width: 400px !important;
     }
-    iframe {
-        width: 600px;
-        height: 350px;
-        display: flex;
-        align-self: center;
-    }
     #chart1,
     #chart2,
     #chart3,
@@ -431,6 +425,86 @@ footer {
         width: 94%;
         height: 98%;
         display: block;
+        align-self: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: -2px;
+        letter-spacing: -2px;
+        color: #F2F9FC;
+    }
+    h3 {
+        color: #F2F9FC;
+        letter-spacing: -1px;
+    }
+    #topleft,
+    #topright,
+    #bottomleft,
+    #bottomright {
+        display: flex;
+        padding: 5px;
+        margin: 5px;
+        background-color: #007582bf;
+        overflow: hidden;
+        border-radius: 25px;
+        width: 33%;
+        justify-content: center;
+        text-align: center;
+    }
+    #bottomright {
+        white-space: nowrap;
+    }
+    .rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 500px;
+        margin-top: .75%;
+    }
+    .column {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .canvasjs-chart-canvas {
+        width: 100% !important;
+        height: 100%;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+    #mapid,
+    #chart1,
+    #chart2,
+    #chart3,
+    #box {
+        width: 80%;
+        height: 98%;
+        display: block;
+        align-self: center;
+    }
+    #closer h1 br {
+        content: ""
+    }
+    #closer h1 br:after {
+        content: " "
+    }
+    #closer h1 {
+        line-height: 47px;
+        margin-top: .5%;
+        font-size: 40px;
+    }
+    .breaker {
+        display: flex;
+        width: 80%;
+        justify-self: center;
         align-self: center;
     }
 }
